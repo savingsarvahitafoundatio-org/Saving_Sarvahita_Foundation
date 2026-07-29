@@ -34,8 +34,6 @@
         <div class="social-links">
           <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
           <a href="https://www.instagram.com/savingsarvahitafoundation" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
         </div>
       </div>
     </div>
@@ -58,9 +56,19 @@
         <li><a href="index.html#causes" class="nav-link">Our Causes</a></li>
         <li><a href="index.html#campaigns" class="nav-link">Upcoming Event</a></li>
         <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        <li class="mobile-cta-wrapper">
+          <div class="mobile-menu-cta">
+            <button class="btn btn-orange trigger-donate" style="width: 100%; justify-content: center;">
+              <i class="fa-solid fa-heart"></i> Donate Now
+            </button>
+            <button class="btn btn-teal trigger-volunteer" style="width: 100%; justify-content: center;">
+              <i class="fa-solid fa-user-plus"></i> Volunteer
+            </button>
+          </div>
+        </li>
       </ul>
 
-      <div style="display: flex; align-items: center; gap: 12px;">
+      <div class="nav-actions">
         <button class="btn btn-orange trigger-donate">
           <i class="fa-solid fa-heart"></i> Donate Now
         </button>
@@ -149,35 +157,61 @@
       </div>
 
       <!-- Director Cards Container -->
-      <div style="display: flex; gap: 44px; justify-content: center; align-items: center; flex-wrap: wrap; margin-bottom: 70px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 36px; margin-bottom: 70px;">
         
-        <!-- Director 1: Aakash Katti -->
-        <div style="background: #FFFFFF; border-radius: 24px; padding: 36px 32px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); text-align: center; width: 100%; max-width: 350px; position: relative; overflow: hidden; transition: transform 0.3s ease;" class="director-card">
-          <div style="position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, #0E7490, #06B6D4);"></div>
+        <!-- Director 1: Aakash Mantappa Katti -->
+        <div style="background: #FFFFFF; border-radius: 24px; padding: 40px 32px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4); border: 1px solid rgba(255,255,255,0.2); position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; text-align: center;" class="director-card">
+          <div style="position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, #0E7490, #38BDF8);"></div>
           
-          <div style="width: 190px; height: 190px; border-radius: 50%; overflow: hidden; margin: 10px auto 22px; border: 4px solid #FFFFFF; box-shadow: 0 12px 30px rgba(14, 116, 144, 0.25); outline: 3px solid #38BDF8; background: #F8FAFC;">
-            <img src="assets/Aakash Katti.jpeg" alt="Aakash Katti - Director" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
+          <div style="width: 170px; height: 170px; border-radius: 50%; overflow: hidden; margin-bottom: 20px; border: 4px solid #FFFFFF; box-shadow: 0 12px 28px rgba(14, 116, 144, 0.25); outline: 3px solid #38BDF8; background: #F8FAFC; flex-shrink: 0;">
+            <img src="assets/Aakash Katti.jpeg" alt="Aakash Mantappa Katti" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
           </div>
 
-          <h3 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: #0F172A; margin-bottom: 10px;">Aakash Katti</h3>
+          <h3 style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800; color: #0F172A; margin-bottom: 6px;">Aakash Mantappa Katti</h3>
           
-          <div style="display: inline-flex; align-items: center; gap: 6px; background: #E0F2FE; color: #0369A1; font-weight: 800; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; padding: 7px 20px; border-radius: 50px;">
-            <i class="fa-solid fa-user-tie"></i> Director
+          <div style="display: inline-flex; align-items: center; gap: 6px; background: #E0F2FE; color: #0369A1; font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 6px 18px; border-radius: 50px; margin-bottom: 24px;">
+            <i class="fa-solid fa-user-tie"></i> Founder, Chairman & Managing Director
+          </div>
+
+          <div style="background: #F8FAFC; padding: 24px; border-radius: 16px; border: 1px solid #E2E8F0; text-align: left; position: relative; flex-grow: 1;">
+            <i class="fa-solid fa-quote-left" style="color: #0E7490; opacity: 0.25; font-size: 2rem; position: absolute; top: 16px; right: 16px;"></i>
+            <p style="color: #334155; font-size: 0.95rem; line-height: 1.7; margin-bottom: 14px;">
+              "I never imagined that one day I would start an NGO. Like many people, I was busy building my own career and life. But over the years, I kept meeting families who needed help and children who had dreams but no support to achieve them. Every such experience stayed with me longer than I expected."
+            </p>
+            <p style="color: #334155; font-size: 0.95rem; line-height: 1.7; margin-bottom: 14px;">
+              "One day, I realised that waiting for someone else to make a difference wasn't the answer. If I had the ability to help, even in a small way, I should start. That thought became the foundation of Saving Sarvahita Foundation."
+            </p>
+            <p style="color: #334155; font-size: 0.95rem; line-height: 1.7; margin: 0; font-weight: 600;">
+              "My goal is simple—to build an organisation that people can trust. Whether we help a child continue their education, support an elderly person, or stand beside a family during difficult times, I want every effort to be genuine, transparent, and made with respect for human dignity."
+            </p>
           </div>
         </div>
 
-        <!-- Director 2: Vedant Pal -->
-        <div style="background: #FFFFFF; border-radius: 24px; padding: 36px 32px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); text-align: center; width: 100%; max-width: 350px; position: relative; overflow: hidden; transition: transform 0.3s ease;" class="director-card">
+        <!-- Director 2: Vedant Sanjeevkumar Pal -->
+        <div style="background: #FFFFFF; border-radius: 24px; padding: 40px 32px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4); border: 1px solid rgba(255,255,255,0.2); position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; text-align: center;" class="director-card">
           <div style="position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, #F97316, #FB923C);"></div>
 
-          <div style="width: 190px; height: 190px; border-radius: 50%; overflow: hidden; margin: 10px auto 22px; border: 4px solid #FFFFFF; box-shadow: 0 12px 30px rgba(249, 115, 22, 0.25); outline: 3px solid #F97316; background: #F8FAFC;">
-            <img src="assets/Vedant Pal.jpeg" alt="Vedant Pal - Director" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
+          <div style="width: 170px; height: 170px; border-radius: 50%; overflow: hidden; margin-bottom: 20px; border: 4px solid #FFFFFF; box-shadow: 0 12px 28px rgba(249, 115, 22, 0.25); outline: 3px solid #F97316; background: #F8FAFC; flex-shrink: 0;">
+            <img src="assets/Vedant Pal.jpeg" alt="Vedant Sanjeevkumar Pal" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
           </div>
 
-          <h3 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: #0F172A; margin-bottom: 10px;">Vedant Pal</h3>
+          <h3 style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800; color: #0F172A; margin-bottom: 6px;">Vedant Sanjeevkumar Pal</h3>
 
-          <div style="display: inline-flex; align-items: center; gap: 6px; background: #FFEDD5; color: #C2410C; font-weight: 800; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; padding: 7px 20px; border-radius: 50px;">
-            <i class="fa-solid fa-user-tie"></i> Director
+          <div style="display: inline-flex; align-items: center; gap: 6px; background: #FFEDD5; color: #C2410C; font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 6px 18px; border-radius: 50px; margin-bottom: 24px;">
+            <i class="fa-solid fa-user-tie"></i> Director & Chief Operating Officer
+          </div>
+
+          <div style="background: #F8FAFC; padding: 24px; border-radius: 16px; border: 1px solid #E2E8F0; text-align: left; position: relative; flex-grow: 1;">
+            <i class="fa-solid fa-quote-left" style="color: #F97316; opacity: 0.25; font-size: 2rem; position: absolute; top: 16px; right: 16px;"></i>
+            <p style="color: #334155; font-size: 0.95rem; line-height: 1.7; margin-bottom: 14px;">
+              "I've always believed that helping people doesn't require a special occasion. Sometimes all it takes is showing up when someone has nowhere else to turn. While working with different people and listening to their stories, I understood that many problems can be solved when someone genuinely cares enough to take the first step."
+            </p>
+            <p style="color: #334155; font-size: 0.95rem; line-height: 1.7; margin-bottom: 14px;">
+              "When Aakash shared the idea of creating Saving Sarvahita Foundation, I knew I wanted to be part of that journey. Today, my focus is to ensure that every initiative is carried out responsibly and reaches the people it is meant for."
+            </p>
+            <p style="color: #334155; font-size: 0.95rem; line-height: 1.7; margin: 0; font-weight: 600;">
+              "For me, this Foundation is about earning trust through actions, not words. If our work can bring hope to even one family, we know we're moving in the right direction."
+            </p>
           </div>
         </div>
 
@@ -238,11 +272,11 @@
     <div style="max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2;">
       <span style="color: #38BDF8; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase;">100% LEGAL TRANSPARENCY</span>
       <h2 style="font-family: var(--font-heading); font-size: 2.4rem; font-weight: 800; margin: 8px 0 16px;">Government Certificates & Incorporation</h2>
-      <p style="color: #94A3B8; max-width: 680px; margin: 0 auto 50px; font-size: 1.05rem;">Official Section 8 Certificate of Incorporation (Ministry of Corporate Affairs) & Government e-PAN Card.</p>
+      <p style="color: #94A3B8; max-width: 680px; margin: 0 auto 50px; font-size: 1.05rem;">Official Section 8 Certificate of Incorporation (Ministry of Corporate Affairs), NITI Aayog NGO Darpan Registration & Government e-PAN Card.</p>
 
-      <div style="display: flex; gap: 36px; justify-content: center; align-items: center; flex-wrap: wrap;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; align-items: start;">
         <!-- Certificate 1: Certificate of Incorporation -->
-        <div style="flex: 1; min-width: 320px; max-width: 480px;">
+        <div style="width: 100%;">
           <div style="border: 12px solid #92400E; border-image: linear-gradient(135deg, #F59E0B, #B45309, #D97706, #78350F) 1; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), inset 0 0 0 3px #FEF3C7; border-radius: 8px; overflow: hidden; background: white; padding: 8px; transition: transform 0.3s ease;">
             <img src="assets/Sarvahita Part B Approval.jpg" alt="Government Certificate of Incorporation" style="width: 100%; height: auto; display: block; border-radius: 4px;">
           </div>
@@ -250,8 +284,17 @@
           <p style="color: #38BDF8; font-size: 0.88rem; font-weight: 600;">Ministry of Corporate Affairs • Govt of India</p>
         </div>
 
-        <!-- Certificate 2: e-PAN Card -->
-        <div style="flex: 1; min-width: 320px; max-width: 480px;">
+        <!-- Certificate 2: NGO Darpan Registration -->
+        <div style="width: 100%;">
+          <div style="border: 12px solid #92400E; border-image: linear-gradient(135deg, #F59E0B, #B45309, #D97706, #78350F) 1; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), inset 0 0 0 3px #FEF3C7; border-radius: 8px; overflow: hidden; background: white; padding: 8px; transition: transform 0.3s ease;">
+            <img src="assets/SAVING_SARVAHITA_FOUNDATION-1 Darpan.jpg" alt="NITI Aayog NGO Darpan Registration Certificate" style="width: 100%; height: auto; display: block; border-radius: 4px;">
+          </div>
+          <h4 style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; margin-top: 18px; color: #F1F5F9;">NITI Aayog NGO Darpan</h4>
+          <p style="color: #34D399; font-size: 0.88rem; font-weight: 600;">NITI Aayog • Government of India</p>
+        </div>
+
+        <!-- Certificate 3: e-PAN Card -->
+        <div style="width: 100%;">
           <div style="border: 12px solid #92400E; border-image: linear-gradient(135deg, #F59E0B, #B45309, #D97706, #78350F) 1; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), inset 0 0 0 3px #FEF3C7; border-radius: 8px; overflow: hidden; background: white; padding: 8px; transition: transform 0.3s ease;">
             <img src="assets/Sarvahita Pan.jpg" alt="Income Tax Department e-PAN Card" style="width: 100%; height: auto; display: block; border-radius: 4px;">
           </div>
@@ -279,8 +322,6 @@
         <div class="social-links">
           <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
           <a href="https://www.instagram.com/savingsarvahitafoundation" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
         </div>
       </div>
 
