@@ -175,15 +175,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const causeDetails = {
     education: {
-      title: "Education Support (Sushiksha)",
-      desc: "Our Sushiksha project aims to provide fundamental study kits, books, and educational guidance to underprivileged children in Mumbai to ensure no child drops out of school."
+      title: "Education Support",
+      desc: "Our educational support project aims to provide fundamental study kits, books, and educational guidance to underprivileged children in Mumbai to ensure no child drops out of school."
     },
     child: {
       title: "Orphanage & Child Support",
       desc: "Supporting vulnerable children with basic nutritional kits, care supplies, and mentorship programs to provide them with safety and hope."
     },
     senior: {
-      title: "Senior Citizen Welfare",
+      title: "Senior Citizen Support",
       desc: "Ensuring dignity, free primary health checkups, companionship, and emotional support for senior citizens living in hardship."
     },
     women: {
@@ -191,11 +191,11 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Conducting basic skill awareness, vocational guidance, hygiene distribution, and micro-entrepreneurship encouragement for women."
     },
     animal: {
-      title: "Animal Welfare (Pasuraksha)",
-      desc: "Our Pasuraksha drive is focused on street animal feeding, basic injury care, vaccination awareness, and encouraging community empathy."
+      title: "Animal Care & Welfare",
+      desc: "Our animal welfare drive is focused on street animal feeding, basic injury care, vaccination awareness, and encouraging community empathy."
     },
     health: {
-      title: "Dirghayu Healthcare Aid",
+      title: "Healthcare Aid",
       desc: "Organizing primary health screening camps, eye checkups, blood donation awareness, and helping needy patients get emergency care."
     },
     environment: {
@@ -203,8 +203,8 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Planting native trees, neighborhood cleanup drives, and spreading awareness on green, plastic-free living."
     },
     relief: {
-      title: "Ration & Relief Support",
-      desc: "Distributing food packages and emergency supplies to impoverished families in urgent distress."
+      title: "Hunger & Ration Support",
+      desc: "Distributing food packages, essential ration kits, and emergency supplies to impoverished families in urgent distress."
     }
   };
 
