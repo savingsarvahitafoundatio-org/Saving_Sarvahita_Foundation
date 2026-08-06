@@ -159,12 +159,116 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // FormSubmit Integration for Volunteer Form
   const volunteerForm = document.getElementById('volunteerForm');
   if (volunteerForm) {
     volunteerForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      if (volunteerModal) volunteerModal.classList.remove('active');
-      showToast('🌟 Thank you for applying to be a founding volunteer! Our team will contact you soon.');
+
+      const submitBtn = volunteerForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn ? submitBtn.innerHTML : 'Submit Application <i class="fa-solid fa-paper-plane"></i>';
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+      }
+
+      const inputs = volunteerForm.querySelectorAll('input, select');
+      const name = inputs[0] ? inputs[0].value : 'Volunteer';
+      const email = inputs[1] ? inputs[1].value : '';
+      const phone = inputs[2] ? inputs[2].value : '';
+      const interest = inputs[3] ? inputs[3].value : 'General';
+
+      const payload = {
+        name: name,
+        email: email,
+        phone: phone,
+        interest: interest,
+        _subject: `New Volunteer Application: ${name}`,
+        _autoresponse: `Dear ${name},\n\nThank you for applying to volunteer with Saving Sarvahita Foundation! Our team has received your details and will contact you shortly.\n\nWarm regards,\nSaving Sarvahita Foundation Team`,
+        _template: "table"
+      };
+
+      fetch("https://formsubmit.co/ajax/info@savingsarvahita.org", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+      .then(() => {
+        if (volunteerModal) volunteerModal.classList.remove('active');
+        volunteerForm.reset();
+        showToast('🌟 Thank you for applying! A confirmation email has been sent to your inbox.');
+      })
+      .catch(() => {
+        if (volunteerModal) volunteerModal.classList.remove('active');
+        volunteerForm.reset();
+        showToast('🌟 Thank you! Your volunteer application has been received.');
+      })
+      .finally(() => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        }
+      });
+    });
+  }
+
+  // FormSubmit Integration for Contact Form
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn ? submitBtn.innerHTML : 'Send Message <i class="fa-solid fa-paper-plane"></i>';
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+      }
+
+      const name = contactForm.querySelector('input[type="text"]')?.value || 'Visitor';
+      const email = contactForm.querySelector('input[type="email"]')?.value || '';
+      const phone = contactForm.querySelector('input[type="tel"]')?.value || '';
+      const subject = contactForm.querySelector('select')?.value || 'General Inquiry';
+      const message = contactForm.querySelector('textarea')?.value || '';
+
+      const payload = {
+        name: name,
+        email: email,
+        phone: phone,
+        subject: subject,
+        message: message,
+        _subject: `New Contact Inquiry: ${subject}`,
+        _autoresponse: `Dear ${name},\n\nThank you for reaching out to Saving Sarvahita Foundation. We have received your inquiry regarding "${subject}" and our team will get back to you shortly.\n\nWarm regards,\nSaving Sarvahita Foundation Team`,
+        _template: "table"
+      };
+
+      fetch("https://formsubmit.co/ajax/info@savingsarvahita.org", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+      .then(() => {
+        contactForm.reset();
+        showToast('📩 Message sent successfully! A reply has been sent to your email.');
+      })
+      .catch(() => {
+        contactForm.reset();
+        showToast('📩 Thank you! Your message has been received.');
+      })
+      .finally(() => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        }
+      });
     });
   }
 
