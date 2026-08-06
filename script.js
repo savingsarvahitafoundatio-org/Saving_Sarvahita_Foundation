@@ -235,6 +235,111 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Gallery Filter System
+  const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-filter');
+
+      galleryItems.forEach(item => {
+        const cat = item.getAttribute('data-category');
+        if (filter === 'all' || cat === filter) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Lightbox Modal Logic for Gallery Photos
+  const lightboxModal = document.getElementById('lightboxModal');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const closeLightbox = document.getElementById('closeLightbox');
+  const prevLightbox = document.getElementById('prevLightbox');
+  const nextLightbox = document.getElementById('nextLightbox');
+
+  let currentGalleryIndex = 0;
+  let activeGalleryItems = [];
+
+  function updateActiveGalleryItems() {
+    activeGalleryItems = Array.from(galleryItems).filter(item => item.style.display !== 'none');
+  }
+
+  galleryItems.forEach(item => {
+    item.addEventListener('click', () => {
+      updateActiveGalleryItems();
+      currentGalleryIndex = activeGalleryItems.indexOf(item);
+      openLightboxItem(item);
+    });
+  });
+
+  function openLightboxItem(item) {
+    if (!item) return;
+    const img = item.querySelector('img');
+    const title = item.querySelector('h4') ? item.querySelector('h4').textContent : '';
+    const desc = item.querySelector('p') ? item.querySelector('p').textContent : '';
+
+    if (img && lightboxImg) {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt || title;
+    }
+    if (lightboxCaption) {
+      lightboxCaption.textContent = title ? `${title} - ${desc}` : desc;
+    }
+    if (lightboxModal) {
+      lightboxModal.classList.add('active');
+    }
+  }
+
+  if (closeLightbox && lightboxModal) {
+    closeLightbox.addEventListener('click', () => {
+      lightboxModal.classList.remove('active');
+    });
+
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) {
+        lightboxModal.classList.remove('active');
+      }
+    });
+  }
+
+  if (prevLightbox) {
+    prevLightbox.addEventListener('click', (e) => {
+      e.stopPropagation();
+      updateActiveGalleryItems();
+      if (activeGalleryItems.length > 0) {
+        currentGalleryIndex = (currentGalleryIndex - 1 + activeGalleryItems.length) % activeGalleryItems.length;
+        openLightboxItem(activeGalleryItems[currentGalleryIndex]);
+      }
+    });
+  }
+
+  if (nextLightbox) {
+    nextLightbox.addEventListener('click', (e) => {
+      e.stopPropagation();
+      updateActiveGalleryItems();
+      if (activeGalleryItems.length > 0) {
+        currentGalleryIndex = (currentGalleryIndex + 1) % activeGalleryItems.length;
+        openLightboxItem(activeGalleryItems[currentGalleryIndex]);
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (lightboxModal && lightboxModal.classList.contains('active')) {
+      if (e.key === 'Escape') lightboxModal.classList.remove('active');
+      if (e.key === 'ArrowLeft' && prevLightbox) prevLightbox.click();
+      if (e.key === 'ArrowRight' && nextLightbox) nextLightbox.click();
+    }
+  });
+
   // Toast Notification System
   function showToast(message) {
     let toast = document.getElementById('toastNotification');
@@ -251,3 +356,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 4000);
   }
 });
+

@@ -55,7 +55,9 @@
         <li><a href="index.html" class="nav-link active">Home</a></li>
         <li><a href="about.html" class="nav-link">About Us</a></li>
         <li><a href="#causes" class="nav-link">Our Causes</a></li>
-        <li><a href="#campaigns" class="nav-link">Upcoming Event</a></li>
+        <li><a href="#campaigns" class="nav-link">Events</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
         <li><a href="contact.html" class="nav-link">Contact Us</a></li>
         <li class="mobile-cta-wrapper">
           <div class="mobile-menu-cta">
@@ -239,43 +241,154 @@
     </div>
   </section>
 
-  <!-- UPCOMING EVENT SECTION -->
-  <section class="featured-campaign-section" id="campaigns">
-    <div class="featured-container">
-      <div class="campaign-card">
-        <div class="campaign-img">
-          <img src="assets/education.png" alt="Upcoming Study Kit Distribution Drive">
+  <!-- EVENTS & DRIVES SECTION — PREMIUM REDESIGN -->
+  <section class="events-section-premium" id="campaigns">
+    <div class="events-section-inner">
+
+      <!-- Section Header -->
+      <div class="events-header">
+        <div class="section-tag">
+          <i class="fa-solid fa-calendar-check"></i> EVENTS & COMMUNITY DRIVES
         </div>
-        <div>
-          <span class="campaign-tag" style="background: #E0F2FE; color: #0369A1;">
-            <i class="fa-solid fa-calendar-star"></i> UPCOMING EVENT • THIS WEEK
-          </span>
-          <h3 class="campaign-title">Study Kits Distribution For 22 Children at Maranatha Harvest Mission Orphanage Society</h3>
-          <p class="campaign-desc">Upcoming Drive: Our team is distributing free study kits, notebooks, school bags, and stationery to 22 children at Maranatha Harvest Mission Orphanage Society in Chembur West, Mumbai.</p>
-          
-          <div style="background: #F1F5F9; padding: 14px 18px; border-radius: 12px; margin-bottom: 20px; display: flex; gap: 20px; flex-wrap: wrap; font-size: 0.88rem; font-weight: 700; color: #1E293B;">
-            <div><i class="fa-solid fa-clock" style="color: #0E7490; margin-right: 6px;"></i> Date: Upcoming (This / Next Week)</div>
-            <div><i class="fa-solid fa-location-dot" style="color: #F97316; margin-right: 6px;"></i> Location: Maranatha Harvest Mission Orphanage, Chembur West, Mumbai</div>
+        <h2 class="section-title" style="margin-top: 10px;">Our Drives & Field Initiatives</h2>
+        <p class="events-header-sub">Real impact, real stories — every drive we complete changes lives across Mumbai.</p>
+      </div>
+
+      <!-- Event Cards Grid -->
+      <div class="events-premium-grid">
+
+        <!-- COMPLETED EVENT CARD -->
+        <article class="ep-card ep-card--completed">
+          <div class="ep-card-banner">
+            <img src="assets/Study Kits Distribution - 02-08-26/IMG_20260802_133026.jpg.webp" alt="Study Kit Distribution Drive at Maranatha Orphanage">
+            <div class="ep-card-banner-overlay"></div>
+            <div class="ep-card-status ep-status--completed">
+              <i class="fa-solid fa-circle-check"></i> Completed Drive
+            </div>
+            <div class="ep-card-category-pill">
+              <i class="fa-solid fa-graduation-cap"></i> Education
+            </div>
           </div>
 
-          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-            <button class="btn btn-teal trigger-volunteer">
-              <i class="fa-solid fa-user-plus"></i> Join as Event Volunteer
-            </button>
-            <button class="btn btn-outline" onclick="navigator.clipboard.writeText(window.location.href); alert('Event details copied to clipboard!');">
-              <i class="fa-solid fa-share-nodes"></i> Share Event
-            </button>
+          <div class="ep-card-body">
+            <div class="ep-card-meta-row">
+              <span class="ep-meta-item">
+                <i class="fa-solid fa-calendar-check" style="color: #10B981;"></i>
+                August 2026
+              </span>
+              <span class="ep-meta-divider">•</span>
+              <span class="ep-meta-item">
+                <i class="fa-solid fa-location-dot" style="color: #F97316;"></i>
+                Chembur West, Mumbai
+              </span>
+            </div>
+
+            <h3 class="ep-card-title">Study Kits Distribution For 22 Children at Maranatha Harvest Mission Orphanage Society</h3>
+
+            <p class="ep-card-desc">Our team successfully distributed free study kits, school bags, notebooks, geometry boxes, and essential stationery to 22 children — giving every child the tools to pursue their education.</p>
+
+            <!-- Impact Numbers -->
+            <div class="ep-impact-row">
+              <div class="ep-impact-chip">
+                <span class="ep-impact-num">22</span>
+                <span class="ep-impact-lbl">Children Supported</span>
+              </div>
+              <div class="ep-impact-chip">
+                <span class="ep-impact-num">100%</span>
+                <span class="ep-impact-lbl">Kits Distributed</span>
+              </div>
+              <div class="ep-impact-chip">
+                <span class="ep-impact-num">1</span>
+                <span class="ep-impact-lbl">Orphanage Reached</span>
+              </div>
+            </div>
+
+            <div class="ep-card-actions">
+              <a href="blog-study-kits-maranatha.html" class="btn btn-teal">
+                <i class="fa-solid fa-newspaper"></i> Read Blog Story
+              </a>
+              <a href="#gallery" class="btn btn-outline">
+                <i class="fa-solid fa-images"></i> View Photos
+              </a>
+              <button class="ep-share-btn" onclick="navigator.clipboard.writeText(window.location.origin + '/blog-study-kits-maranatha.html'); alert('Event blog link copied!');">
+                <i class="fa-solid fa-share-nodes"></i>
+              </button>
+            </div>
           </div>
+        </article>
+
+        <!-- UPCOMING EVENT CARD -->
+        <article class="ep-card ep-card--upcoming">
+          <div class="ep-card-banner">
+            <img src="assets/animal.png" alt="Upcoming Street Animal Feeding & Care Drive">
+            <div class="ep-card-banner-overlay"></div>
+            <div class="ep-card-status ep-status--upcoming">
+              <span class="ep-pulse-dot"></span> Upcoming This Weekend
+            </div>
+            <div class="ep-card-category-pill">
+              <i class="fa-solid fa-paw"></i> Animal Welfare
+            </div>
+          </div>
+
+          <div class="ep-card-body">
+            <div class="ep-card-meta-row">
+              <span class="ep-meta-item">
+                <i class="fa-solid fa-clock" style="color: #0E7490;"></i>
+                This Weekend
+              </span>
+              <span class="ep-meta-divider">•</span>
+              <span class="ep-meta-item">
+                <i class="fa-solid fa-location-dot" style="color: #F97316;"></i>
+                Dahisar & Suburbs, Mumbai
+              </span>
+            </div>
+
+            <h3 class="ep-card-title">Mega Street Animal Care & Feeding Drive across Mumbai Suburbs</h3>
+
+            <p class="ep-card-desc">Join our compassionate drive to feed 100+ stray dogs and cats, provide basic wound care & antiseptics, and distribute reflective safety collars to protect stray animals from road accidents.</p>
+
+            <!-- Goals Row -->
+            <div class="ep-impact-row">
+              <div class="ep-impact-chip ep-impact-chip--blue">
+                <span class="ep-impact-num">100+</span>
+                <span class="ep-impact-lbl">Animals to Feed</span>
+              </div>
+              <div class="ep-impact-chip ep-impact-chip--blue">
+                <span class="ep-impact-num">3+</span>
+                <span class="ep-impact-lbl">Locations</span>
+              </div>
+              <div class="ep-impact-chip ep-impact-chip--blue">
+                <span class="ep-impact-num">∞</span>
+                <span class="ep-impact-lbl">Compassion</span>
+              </div>
+            </div>
+
+            <div class="ep-card-actions">
+              <button class="btn btn-orange trigger-volunteer">
+                <i class="fa-solid fa-user-plus"></i> Join as Volunteer
+              </button>
+              <button class="btn btn-teal trigger-donate">
+                <i class="fa-solid fa-heart"></i> Support Drive
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Bottom Quote Banner -->
+      <div class="events-quote-banner">
+        <div class="events-quote-text">
+          <i class="fa-solid fa-quote-left events-quote-icon"></i>
+          <p>"Every great journey begins with a single step of kindness."</p>
+          <span>— Saving Sarvahita Foundation</span>
+        </div>
+        <div class="events-quote-cta">
+          <button class="btn btn-orange trigger-donate"><i class="fa-solid fa-heart"></i> Donate Now</button>
+          <button class="btn btn-outline-white trigger-volunteer"><i class="fa-solid fa-hand-holding-heart"></i> Become a Volunteer</button>
         </div>
       </div>
 
-      <div class="quote-card">
-        <div class="quote-icon">
-          <i class="fa-solid fa-quote-left"></i>
-        </div>
-        <p class="quote-text">Every great journey begins with a single step of kindness.</p>
-        <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">- Saving Sarvahita Foundation</p>
-      </div>
     </div>
   </section>
 
@@ -360,49 +473,209 @@
     </div>
   </section>
 
-  <!-- PLANNED ACTIVITIES & UPCOMING INITIATIVES GALLERY SECTION -->
+  <!-- EVENT PHOTO GALLERY SECTION -->
   <section class="gallery-section" id="gallery">
     <div class="gallery-container">
       <div class="section-header">
         <div class="section-tag">
-          <i class="fa-solid fa-bullseye"></i> PLANNED INITIATIVES
+          <i class="fa-solid fa-camera"></i> EVENT PHOTO GALLERY & FIELD DRIVES
         </div>
-        <h2 class="section-title">Upcoming Community Drives & Planned Activities</h2>
-        <p style="color: #64748B; font-size: 0.95rem; margin-top: 10px;">As a newly launched non-profit, here are the key on-ground drives we are rolling out this month. Join us as a volunteer to help execute them!</p>
+        <h2 class="section-title">Capturing Our Impact On Ground</h2>
+        <p style="color: #64748B; font-size: 0.95rem; margin-top: 10px;">Explore photos from our completed drives and ongoing initiatives. Click on any photo to view in high resolution!</p>
       </div>
 
+      <!-- Gallery Category Filter Tabs -->
+      <div class="gallery-filters">
+        <button class="gallery-filter-btn active" data-filter="all">All Drive Photos</button>
+        <button class="gallery-filter-btn" data-filter="study-kits">Study Kits Distribution Drive (02-08-26)</button>
+      </div>
+
+      <!-- Gallery Grid -->
       <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="assets/education.png" alt="Planned Study Kit Distribution">
+        
+        <div class="gallery-item" data-category="study-kits">
+          <img src="assets/Study Kits Distribution - 02-08-26/IMG_20260802_133026.jpg.webp" alt="Study Kit Distribution Ceremony For 22 Children">
           <div class="gallery-overlay">
-            <h4>Study Kit Distribution Drive</h4>
-            <p>Upcoming: 22 Children Education Drive</p>
+            <h4>Study Kit Distribution Ceremony</h4>
+            <p>22 Children at Maranatha Orphanage Society (02-08-26)</p>
           </div>
         </div>
 
-        <div class="gallery-item">
-          <img src="assets/animal.png" alt="Planned Animal Care Drive">
+        <div class="gallery-item" data-category="study-kits">
+          <img src="assets/Study Kits Distribution - 02-08-26/IMG_20260802_133114.jpg.webp" alt="Students Receiving Free School Bags & Kits">
           <div class="gallery-overlay">
-            <h4>Animal Feeding Drive</h4>
-            <p>Planned Street Animal Care</p>
+            <h4>School Bags & Supplies Handover</h4>
+            <p>Empowering 22 Young Minds with Learning Tools</p>
           </div>
         </div>
 
-        <div class="gallery-item">
-          <img src="assets/health.png" alt="Planned Community Health Camp">
+        <div class="gallery-item" data-category="study-kits">
+          <img src="assets/Study Kits Distribution - 02-08-26/IMG_20260802_133250.jpg.webp" alt="Notebooks & Stationery Kits Distribution">
           <div class="gallery-overlay">
-            <h4>Primary Health Camp</h4>
-            <p>Planned Health Screening Drive</p>
+            <h4>Notebooks & Stationery Kits</h4>
+            <p>Maranatha Harvest Mission Orphanage Drive</p>
           </div>
         </div>
 
-        <div class="gallery-item">
-          <img src="assets/tree.png" alt="Planned Tree Plantation Drive">
+        <div class="gallery-item" data-category="study-kits">
+          <img src="assets/Study Kits Distribution - 02-08-26/IMG_20260802_133426.jpg.webp" alt="Volunteers Interacting with Children">
           <div class="gallery-overlay">
-            <h4>Neighborhood Plantation</h4>
-            <p>Planned Environmental Drive</p>
+            <h4>Mentorship & Interaction</h4>
+            <p>Inspiring Children to Pursue Education</p>
           </div>
         </div>
+
+        <div class="gallery-item" data-category="study-kits">
+          <img src="assets/Study Kits Distribution - 02-08-26/IMG_20260802_133427.jpg.webp" alt="Distributing School Supplies to Children">
+          <div class="gallery-overlay">
+            <h4>Free Learning Supplies Handover</h4>
+            <p>Chembur West, Mumbai Drive</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="study-kits">
+          <img src="assets/Study Kits Distribution - 02-08-26/IMG_20260802_133509.jpg.webp" alt="Children Smiling with New Study Kits">
+          <div class="gallery-overlay">
+            <h4>Happy Smiles & Learning Hope</h4>
+            <p>Study Kit Distribution Drive, Mumbai</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="study-kits">
+          <img src="assets/Study Kits Distribution - 02-08-26/IMG_20260802_133526.jpg.webp" alt="Children Showing New Notebooks & Bags">
+          <div class="gallery-overlay">
+            <h4>Joy of Education</h4>
+            <p>22 Children Supported at Orphanage</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="study-kits">
+          <img src="assets/Study Kits Distribution - 02-08-26/IMG_20260802_133540.jpg.webp" alt="Distributing Writing Pads & Geometry Boxes">
+          <div class="gallery-overlay">
+            <h4>Geometry Boxes & Pens Handover</h4>
+            <p>Complete Study Kits Package</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="study-kits">
+          <img src="assets/Study Kits Distribution - 02-08-26/IMG_20260802_133731.jpg.webp" alt="Volunteers Distributing Educational Materials">
+          <div class="gallery-overlay">
+            <h4>Volunteers in Action</h4>
+            <p>Saving Sarvahita Foundation Team Drive</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="study-kits">
+          <img src="assets/Study Kits Distribution - 02-08-26/IMG_20260802_133733.jpg.webp" alt="Group Photo with Children & Team">
+          <div class="gallery-overlay">
+            <h4>Group Photo with Children & NGO Team</h4>
+            <p>Chembur West, Mumbai Drive Highlights</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="study-kits">
+          <img src="assets/Study Kits Distribution - 02-08-26/IMG_20260802_133954.jpg.webp" alt="Full Study Kit Package Distribution">
+          <div class="gallery-overlay">
+            <h4>Complete Study Kit Handover</h4>
+            <p>Stationery, Bags, Notebooks & Geometry Boxes</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG & IMPACT STORIES SECTION -->
+  <section class="blog-section" id="blog">
+    <div class="blog-container">
+      <div class="section-header" style="text-align: center; margin-bottom: 30px;">
+        <div class="section-tag">
+          <i class="fa-solid fa-newspaper"></i> IMPACT STORIES & BLOG
+        </div>
+        <h2 class="section-title">Latest Updates & Drive Reports</h2>
+        <p style="color: #64748B; font-size: 0.95rem; margin-top: 10px;">Read detailed recap reports, stories from the field, and foundation milestones.</p>
+      </div>
+
+      <div class="blog-grid">
+        
+        <!-- Blog Card 1: Completed Study Kit Event -->
+        <article class="blog-card">
+          <div class="blog-card-img">
+            <img src="assets/Study Kits Distribution - 02-08-26/IMG_20260802_133026.jpg.webp" alt="Study Kit Distribution Drive">
+            <span class="blog-card-category" style="background: #10B981;">COMPLETED DRIVE</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span><i class="fa-solid fa-calendar-day"></i> August 2026</span>
+              <span>•</span>
+              <span><i class="fa-solid fa-user"></i> NGO Team</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="blog-study-kits-maranatha.html">Study Kits Distribution For 22 Children at Maranatha Orphanage Society</a>
+            </h3>
+            <p class="blog-card-excerpt">
+              Our team distributed complete free study kits, school bags, notebooks, geometry boxes, and stationery to 22 children in Chembur West, Mumbai.
+            </p>
+            <a href="blog-study-kits-maranatha.html" class="blog-card-link">
+              Read Full Story <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Blog Card 2: Upcoming Animal Care Drive -->
+        <article class="blog-card">
+          <div class="blog-card-img">
+            <img src="assets/animal.png" alt="Street Animal Care & Feeding Drive">
+            <span class="blog-card-category" style="background: #0E7490;">UPCOMING DRIVE</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span><i class="fa-solid fa-calendar-day"></i> Upcoming Weekend</span>
+              <span>•</span>
+              <span><i class="fa-solid fa-paw"></i> Animal Care</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="#campaigns">Mega Street Animal Care & Feeding Drive across Mumbai Suburbs</a>
+            </h3>
+            <p class="blog-card-excerpt">
+              Preparing for our upcoming initiative to feed 100+ stray dogs and cats, conduct wound dressing, and distribute reflective safety collars.
+            </p>
+            <a href="#campaigns" class="blog-card-link">
+              View Drive Details <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Blog Card 3: Foundation Compliance & Transparency -->
+        <article class="blog-card">
+          <div class="blog-card-img">
+            <img src="assets/SAVING_SARVAHITA_FOUNDATION-1 Darpan.jpg" alt="Government Compliance & Transparency">
+            <span class="blog-card-category" style="background: #F97316;">TRANSPARENCY</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span><i class="fa-solid fa-calendar-day"></i> July 2026</span>
+              <span>•</span>
+              <span><i class="fa-solid fa-shield"></i> Official</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="about.html">Saving Sarvahita Foundation Receives Official NGO Darpan & Section 8 License</a>
+            </h3>
+            <p class="blog-card-excerpt">
+              Reinforcing our commitment to 100% financial transparency and official government compliance for donor trust.
+            </p>
+            <a href="about.html" class="blog-card-link">
+              Read About Us <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="blog.html" class="btn btn-teal">
+          <i class="fa-solid fa-newspaper"></i> View All Blog Posts & Reports
+        </a>
       </div>
     </div>
   </section>
@@ -591,6 +864,17 @@
       <button class="btn btn-orange trigger-donate" onclick="document.getElementById('causeModal').classList.remove('active');">
         <i class="fa-solid fa-heart"></i> Support This Initiative
       </button>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX MODAL FOR GALLERY -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <div class="lightbox-container">
+      <button class="lightbox-close" id="closeLightbox"><i class="fa-solid fa-xmark"></i></button>
+      <button class="lightbox-nav lightbox-prev" id="prevLightbox"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="lightbox-nav lightbox-next" id="nextLightbox"><i class="fa-solid fa-chevron-right"></i></button>
+      <img src="" alt="Gallery Image" class="lightbox-img" id="lightboxImg">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
     </div>
   </div>
 
