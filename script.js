@@ -184,6 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
         email: email,
         phone: phone,
         interest: interest,
+        _replyto: email,
         _subject: `New Volunteer Application: ${name}`,
         _autoresponse: `Dear ${name},\n\nThank you for applying to volunteer with Saving Sarvahita Foundation! Our team has received your details and will contact you shortly.\n\nWarm regards,\nSaving Sarvahita Foundation Team`,
         _template: "table"
@@ -242,6 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
         phone: phone,
         subject: subject,
         message: message,
+        _replyto: email,
         _subject: `New Contact Inquiry: ${subject}`,
         _autoresponse: `Dear ${name},\n\nThank you for reaching out to Saving Sarvahita Foundation. We have received your inquiry regarding "${subject}" and our team will get back to you shortly.\n\nWarm regards,\nSaving Sarvahita Foundation Team`,
         _template: "table"
