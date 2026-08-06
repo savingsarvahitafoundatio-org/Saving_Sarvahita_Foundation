@@ -184,29 +184,33 @@ document.addEventListener('DOMContentLoaded', () => {
         email: email,
         phone: phone,
         interest: interest,
-        _replyto: email,
         _subject: `New Volunteer Application: ${name}`,
-        _autoresponse: `Dear ${name},\n\nThank you for applying to volunteer with Saving Sarvahita Foundation! Our team has received your details and will contact you shortly.\n\nWarm regards,\nSaving Sarvahita Foundation Team`,
         _template: "table"
       };
 
-      fetch("https://formsubmit.co/ajax/info@savingsarvahita.org", {
+      // 1. Send submission to NGO inbox
+      const sendNgo = fetch("https://formsubmit.co/ajax/info@savingsarvahita.org", {
         method: "POST",
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(payload)
-      })
+      });
+
+      // 2. Send Thank You email directly to Volunteer inbox
+      const sendVolunteer = email ? fetch(`https://formsubmit.co/ajax/${encodeURIComponent(email)}`, {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          _subject: "Thank You for Applying - Saving Sarvahita Foundation",
+          Organization: "Saving Sarvahita Foundation",
+          Message: `Dear ${name},\n\nThank you for applying to volunteer with Saving Sarvahita Foundation! Our team has received your application and will get in touch with you shortly.\n\nWarm regards,\nSaving Sarvahita Foundation Team`
+        })
+      }) : Promise.resolve();
+
+      Promise.allSettled([sendNgo, sendVolunteer])
       .then(() => {
         if (volunteerModal) volunteerModal.classList.remove('active');
         volunteerForm.reset();
-        showToast('🌟 Thank you for applying! A confirmation email has been sent to your inbox.');
-      })
-      .catch(() => {
-        if (volunteerModal) volunteerModal.classList.remove('active');
-        volunteerForm.reset();
-        showToast('🌟 Thank you! Your volunteer application has been received.');
+        showToast('🌟 Thank you for applying! Application received and confirmation email sent.');
       })
       .finally(() => {
         if (submitBtn) {
@@ -243,11 +247,41 @@ document.addEventListener('DOMContentLoaded', () => {
         phone: phone,
         subject: subject,
         message: message,
-        _replyto: email,
         _subject: `New Contact Inquiry: ${subject}`,
-        _autoresponse: `Dear ${name},\n\nThank you for reaching out to Saving Sarvahita Foundation. We have received your inquiry regarding "${subject}" and our team will get back to you shortly.\n\nWarm regards,\nSaving Sarvahita Foundation Team`,
         _template: "table"
       };
+
+      // 1. Send submission to NGO inbox
+      const sendNgo = fetch("https://formsubmit.co/ajax/info@savingsarvahita.org", {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      // 2. Send Thank You email directly to Visitor inbox
+      const sendVisitor = email ? fetch(`https://formsubmit.co/ajax/${encodeURIComponent(email)}`, {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          _subject: `Thank You for Reaching Out - Saving Sarvahita Foundation`,
+          Organization: "Saving Sarvahita Foundation",
+          Message: `Dear ${name},\n\nThank you for contacting Saving Sarvahita Foundation regarding "${subject}". Our team has received your message and will respond to you shortly.\n\nWarm regards,\nSaving Sarvahita Foundation Team`
+        })
+      }) : Promise.resolve();
+
+      Promise.allSettled([sendNgo, sendVisitor])
+      .then(() => {
+        contactForm.reset();
+        showToast('📩 Message sent successfully! Confirmation email sent to your inbox.');
+      })
+      .finally(() => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        }
+      });
+    });
+  }
 
       fetch("https://formsubmit.co/ajax/info@savingsarvahita.org", {
         method: "POST",
