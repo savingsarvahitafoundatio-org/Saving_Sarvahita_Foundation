@@ -2008,7 +2008,7 @@ img {
    ========================================================================== */
 
 .events-section-premium {
-  padding: 90px 0 0;
+  padding: 90px 0 80px;
   background: linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 100%);
   position: relative;
   overflow: hidden;
@@ -2291,16 +2291,18 @@ img {
 
 /* Quote banner at the bottom */
 .events-quote-banner {
-  background: linear-gradient(135deg, var(--navy-dark) 0%, #1E3A8A 100%);
+  background: linear-gradient(135deg, #0F172A 0%, #0E7490 60%, #1E293B 100%);
   border-radius: 20px;
-  padding: 44px 52px;
+  padding: 38px 46px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 32px;
-  margin-bottom: 0;
+  margin-top: 12px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 20px 45px rgba(14, 116, 144, 0.2), 0 10px 25px rgba(15, 23, 42, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .events-quote-banner::before {
