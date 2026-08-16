@@ -75,7 +75,8 @@ Saving_Sarvahita_Foundation/
     ├── tree.png            # Environment cause image
     ├── Aakash Katti.jpeg   # Founder profile photo
     ├── Vedant Pal.jpeg     # Director profile photo
-    ├── QR Sarvahita.jpeg   # UPI donation QR code
+    ├── OR-Kotak.jpeg       # Kotak UPI QR code
+    ├── QR-GPAY.jpeg        # Primary GPay UPI QR code
     ├── Sarvahita Part B Approval.jpg   # MCA Incorporation Certificate
     ├── Sarvahita Pan.jpg               # Income Tax e-PAN Card
     └── SAVING_SARVAHITA_FOUNDATION-1 Darpan.jpg  # NITI Aayog NGO Darpan

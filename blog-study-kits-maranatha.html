@@ -306,9 +306,10 @@
 
       <div>
         <h4 class="footer-col-title">SCAN & DONATE</h4>
-        <div style="background: white; padding: 12px; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.15); display: inline-block;">
-          <img src="assets/QR Sarvahita.jpeg" alt="Official UPI QR Code" style="width: 110px; height: auto; border-radius: 8px; display: block; margin: 0 auto 6px;">
-          <div style="font-size: 0.72rem; font-weight: 700; color: #0F172A; font-family: monospace; background: #F1F5F9; padding: 3px 6px; border-radius: 4px;">savingsarvahita2026@kotak</div>
+        <div style="background: white; padding: 14px; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.15); display: inline-block;">
+          <img src="assets/QR-GPAY.jpeg" alt="Primary UPI QR Code - Saving Sarvahita Foundation" style="width: 115px; height: auto; border-radius: 8px; display: block; margin: 0 auto 6px;">
+          <div style="font-size: 0.72rem; font-weight: 700; color: #0F172A; font-family: monospace; background: #F1F5F9; padding: 3px 6px; border-radius: 4px;">8828428845@okbizaxis</div>
+          <span style="display: block; font-size: 0.65rem; color: #059669; font-weight: 600; margin-top: 4px;"><i class="fa-solid fa-bolt"></i> Instant GPay / UPI</span>
         </div>
       </div>
     </div>
@@ -332,19 +333,48 @@
 
   <!-- DONATION MODAL -->
   <div class="modal-overlay" id="donateModal">
-    <div class="modal-box" style="text-align: center; max-width: 480px;">
+    <div class="modal-box" style="text-align: center; max-width: 460px; max-height: 90vh; overflow-y: auto;">
       <button class="modal-close" id="closeDonateModal"><i class="fa-solid fa-xmark"></i></button>
       <h3 class="modal-title">Support Saving Sarvahita Foundation</h3>
-      <p class="modal-subtitle">Scan & Pay using any UPI app (Google Pay, PhonePe, Paytm, BHIM)</p>
+      <p class="modal-subtitle">Scan & Pay using Google Pay, PhonePe, Paytm, BHIM or any UPI App</p>
 
-      <div style="background: #F8FAFC; padding: 24px; border-radius: 16px; border: 2px dashed #CBD5E1; margin-bottom: 20px;">
-        <img src="assets/QR Sarvahita.jpeg" alt="Official UPI QR Code" style="width: 220px; height: auto; margin: 0 auto 16px; display: block; border: 4px solid white; border-radius: 12px; box-shadow: 0 6px 16px rgba(0,0,0,0.12);">
-        
-        <div style="background: white; padding: 12px 16px; border-radius: 10px; display: inline-flex; align-items: center; gap: 10px; border: 1px solid #E2E8F0; margin-bottom: 12px;">
-          <i class="fa-solid fa-qrcode" style="color: #0E7490; font-size: 1.2rem;"></i>
-          <span style="font-size: 0.95rem; font-weight: 700; color: #0F172A;">UPI ID: <span style="color: #0E7490; font-family: monospace; font-size: 1.05rem;">savingsarvahita2026@kotak</span></span>
-          <button type="button" onclick="navigator.clipboard.writeText('savingsarvahita2026@kotak'); alert('UPI ID copied!');" style="background: #E0F2FE; color: #0369A1; border: none; padding: 4px 10px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 0.75rem;">Copy</button>
+      <!-- Primary QR Container -->
+      <div id="primaryQRBox" style="background: #F8FAFC; padding: 22px 18px; border-radius: 16px; border: 2px dashed #CBD5E1; margin-bottom: 16px;">
+        <div style="display: inline-block; background: #E0F2FE; color: #0369A1; font-size: 0.72rem; font-weight: 700; padding: 3px 12px; border-radius: 20px; margin-bottom: 12px; letter-spacing: 0.3px;">
+          <i class="fa-brands fa-google-pay" style="font-size: 0.95rem; vertical-align: middle;"></i> Primary Payment QR
         </div>
+        
+        <img src="assets/QR-GPAY.jpeg" alt="Official UPI QR Code - Saving Sarvahita Foundation" style="width: 220px; height: auto; margin: 0 auto 14px; display: block; border: 4px solid white; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.1);">
+        
+        <div style="background: white; padding: 10px 14px; border-radius: 10px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #E2E8F0; margin-bottom: 10px;">
+          <i class="fa-solid fa-qrcode" style="color: #0E7490; font-size: 1.1rem;"></i>
+          <span style="font-size: 0.9rem; font-weight: 700; color: #0F172A;">UPI ID: <span style="color: #0E7490; font-family: monospace; font-size: 1rem;">8828428845@okbizaxis</span></span>
+          <button type="button" onclick="navigator.clipboard.writeText('8828428845@okbizaxis'); alert('UPI ID 8828428845@okbizaxis copied to clipboard!');" style="background: #E0F2FE; color: #0369A1; border: none; padding: 4px 10px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 0.75rem;">Copy</button>
+        </div>
+
+        <p style="font-size: 0.82rem; color: #64748B; font-weight: 600; margin: 0;">Account Name: <strong style="color: #1E293B;">Saving Sarvahita Foundation</strong></p>
+      </div>
+
+      <!-- Alternate / Secondary QR Option (Collapsible) -->
+      <div style="margin-bottom: 16px;">
+        <button type="button" onclick="const altBox = document.getElementById('altQRBox'); if(altBox.style.display==='none'){altBox.style.display='block'; this.innerHTML='<i class=\'fa-solid fa-chevron-up\'></i> Hide Alternate Bank QR';}else{altBox.style.display='none'; this.innerHTML='<i class=\'fa-solid fa-building-columns\'></i> Having trouble? Try Alternate Kotak Bank QR';}" style="background: #F1F5F9; color: #475569; border: 1px solid #CBD5E1; padding: 8px 14px; border-radius: 8px; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">
+          <i class="fa-solid fa-building-columns"></i> Having trouble? Try Alternate Kotak Bank QR
+        </button>
+
+        <div id="altQRBox" style="display: none; margin-top: 12px; background: #FFFBEB; padding: 16px; border-radius: 12px; border: 1px solid #FDE68A;">
+          <span style="font-size: 0.78rem; font-weight: 700; color: #92400E; display: block; margin-bottom: 8px;">Kotak Mahindra Bank UPI QR</span>
+          <img src="assets/OR-Kotak.jpeg" alt="Kotak Bank UPI QR Code" style="width: 170px; height: auto; margin: 0 auto 10px; display: block; border: 3px solid white; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.06);">
+          <div style="background: white; padding: 6px 10px; border-radius: 8px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #FDE68A;">
+            <span style="font-size: 0.8rem; font-family: monospace; font-weight: 700; color: #0F172A;">savingsarvahita2026@kotak</span>
+            <button type="button" onclick="navigator.clipboard.writeText('savingsarvahita2026@kotak'); alert('UPI ID savingsarvahita2026@kotak copied!');" style="background: #FEF3C7; color: #92400E; border: none; padding: 3px 8px; border-radius: 4px; font-weight: 700; cursor: pointer; font-size: 0.72rem;">Copy</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="font-size: 0.82rem; color: #64748B; font-weight: 600; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+        <span><i class="fa-solid fa-shield-halved" style="color: #059669; margin-right: 4px;"></i> Verified Official NGO</span>
+        <span>•</span>
+        <span>Instant UPI Donation</span>
       </div>
     </div>
   </div>
