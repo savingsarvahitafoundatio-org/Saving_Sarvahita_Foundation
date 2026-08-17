@@ -179,6 +179,6 @@ This website and its content are the property of Saving Sarvahita Foundation. Un
 
 **Built with ❤️ for a better tomorrow**
 
-*Saving Sarvahita Foundation — Seva | Sahayog | Samarpan  -*
+*Saving Sarvahita Foundation — Seva | Sahayog | Samarpan -*
 
 </div>
