@@ -274,37 +274,96 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeCauseBtn = document.getElementById('closeCauseModal');
 
   const causeDetails = {
+    'sarva-shiksha': {
+      title: "Sarva Shiksha",
+      category: "Education",
+      desc: "Empowering underprivileged children with foundational study kits, textbooks, school supplies, and educational mentorship to prevent dropouts and inspire lifelong learning."
+    },
+    'sarva-jeev-raksha': {
+      title: "Sarva Jeev Raksha",
+      category: "Animal Welfare & Care",
+      desc: "Protecting and nurturing stray animals through daily feeding drives, basic medical and wound care, vaccination awareness, and cultivating community empathy."
+    },
+    'sarva-aahar': {
+      title: "Sarva Aahar",
+      category: "Food & Hunger Support",
+      desc: "Combating hunger by distributing nutritious cooked meals, food packages, and dry ration kits to struggling families and daily-wage earners across Mumbai."
+    },
+    'sarva-vriddh-aashray': {
+      title: "Sarva Vriddh Aashray",
+      category: "Senior Citizen Care & Shelter",
+      desc: "Ensuring dignity, free primary health checkups, companionship, shelter support, and essential supplies for vulnerable elders living in hardship."
+    },
+    'sarva-shakti': {
+      title: "Sarva Shakti",
+      category: "Women Empowerment",
+      desc: "Fostering self-reliance for women through vocational skills awareness, menstrual hygiene distribution, self-help groups, and livelihood guidance."
+    },
+    'sarva-hariyali': {
+      title: "Sarva Hariyali",
+      category: "Environmental Care",
+      desc: "Championing environmental sustainability through urban tree sapling plantation drives, neighborhood cleanups, and green living advocacy."
+    },
+    'sarva-swasthya': {
+      title: "Sarva Swasthya",
+      category: "Healthcare & Medical Support",
+      desc: "Organizing primary health screening camps, diagnostic checkups, medicine distribution, blood donation drives, and emergency medical assistance."
+    },
+    'sarva-sahay': {
+      title: "Sarva Sahay",
+      category: "Community & Emergency Support",
+      desc: "Providing rapid crisis assistance, community relief, emergency supplies, and humanitarian rehabilitation during unforeseen disasters and hardship."
+    },
+    'sarva-kaushal': {
+      title: "Sarva Kaushal",
+      category: "Skill Development & Livelihood",
+      desc: "Empowering youth and unemployed individuals with job-oriented vocational training, technical learning, and career readiness to secure independent livelihoods."
+    },
+    'sarva-saksham': {
+      title: "Sarva Saksham",
+      category: "Digital Literacy & Empowerment",
+      desc: "Bridging the digital divide by introducing fundamental digital literacy, computer education, online safety, and tech skills to underprivileged youth."
+    },
+    // Backwards compatibility aliases
     education: {
-      title: "Education Support",
-      desc: "Our educational support project aims to provide fundamental study kits, books, and educational guidance to underprivileged children in Mumbai to ensure no child drops out of school."
-    },
-    child: {
-      title: "Orphanage & Child Support",
-      desc: "Supporting vulnerable children with basic nutritional kits, care supplies, and mentorship programs to provide them with safety and hope."
-    },
-    senior: {
-      title: "Senior Citizen Support",
-      desc: "Ensuring dignity, free primary health checkups, companionship, and emotional support for senior citizens living in hardship."
-    },
-    women: {
-      title: "Women Empowerment",
-      desc: "Conducting basic skill awareness, vocational guidance, hygiene distribution, and micro-entrepreneurship encouragement for women."
+      title: "Sarva Shiksha",
+      category: "Education",
+      desc: "Empowering underprivileged children with foundational study kits, textbooks, school supplies, and educational mentorship to prevent dropouts and inspire lifelong learning."
     },
     animal: {
-      title: "Animal Care & Welfare",
-      desc: "Our animal welfare drive is focused on street animal feeding, basic injury care, vaccination awareness, and encouraging community empathy."
-    },
-    health: {
-      title: "Healthcare Aid",
-      desc: "Organizing primary health screening camps, eye checkups, blood donation awareness, and helping needy patients get emergency care."
-    },
-    environment: {
-      title: "Environmental Care & Tree Plantation",
-      desc: "Planting native trees, neighborhood cleanup drives, and spreading awareness on green, plastic-free living."
+      title: "Sarva Jeev Raksha",
+      category: "Animal Welfare & Care",
+      desc: "Protecting and nurturing stray animals through daily feeding drives, basic medical and wound care, vaccination awareness, and cultivating community empathy."
     },
     relief: {
-      title: "Hunger & Ration Support",
-      desc: "Distributing food packages, essential ration kits, and emergency supplies to impoverished families in urgent distress."
+      title: "Sarva Aahar",
+      category: "Food & Hunger Support",
+      desc: "Combating hunger by distributing nutritious cooked meals, food packages, and dry ration kits to struggling families and daily-wage earners across Mumbai."
+    },
+    senior: {
+      title: "Sarva Vriddh Aashray",
+      category: "Senior Citizen Care & Shelter",
+      desc: "Ensuring dignity, free primary health checkups, companionship, shelter support, and essential supplies for vulnerable elders living in hardship."
+    },
+    women: {
+      title: "Sarva Shakti",
+      category: "Women Empowerment",
+      desc: "Fostering self-reliance for women through vocational skills awareness, menstrual hygiene distribution, self-help groups, and livelihood guidance."
+    },
+    environment: {
+      title: "Sarva Hariyali",
+      category: "Environmental Care",
+      desc: "Championing environmental sustainability through urban tree sapling plantation drives, neighborhood cleanups, and green living advocacy."
+    },
+    health: {
+      title: "Sarva Swasthya",
+      category: "Healthcare & Medical Support",
+      desc: "Organizing primary health screening camps, diagnostic checkups, medicine distribution, blood donation drives, and emergency medical assistance."
+    },
+    child: {
+      title: "Sarva Shiksha & Child Care",
+      category: "Child Support",
+      desc: "Supporting vulnerable children with basic nutritional kits, educational supplies, and mentorship programs to provide them with safety and hope."
     }
   };
 
@@ -315,6 +374,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (causeModal && causeDetails[key]) {
         document.getElementById('causeModalTitle').textContent = causeDetails[key].title;
         document.getElementById('causeModalDesc').textContent = causeDetails[key].desc;
+        const catElem = document.getElementById('causeModalCategory');
+        if (catElem && causeDetails[key].category) {
+          catElem.textContent = causeDetails[key].category;
+        }
         causeModal.classList.add('active');
       }
     });
@@ -335,9 +398,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Gallery Filter System
+  // Gallery Filter System (Supporting Date Groups and Categories)
   const filterBtns = document.querySelectorAll('.gallery-filter-btn');
   const galleryItems = document.querySelectorAll('.gallery-item');
+  const dateGroups = document.querySelectorAll('.gallery-date-group');
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -345,6 +409,17 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.add('active');
 
       const filter = btn.getAttribute('data-filter');
+
+      if (dateGroups.length > 0) {
+        dateGroups.forEach(group => {
+          const groupCat = group.getAttribute('data-category');
+          if (filter === 'all' || groupCat === filter) {
+            group.style.display = 'block';
+          } else {
+            group.style.display = 'none';
+          }
+        });
+      }
 
       galleryItems.forEach(item => {
         const cat = item.getAttribute('data-category');

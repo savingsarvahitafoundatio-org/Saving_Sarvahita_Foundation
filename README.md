@@ -31,15 +31,20 @@
 
 ---
 
-## 🎯 Our Causes
+## 🎯 Our Programs
 
-| Cause | Description |
-|-------|-------------|
-| 📚 **Education** | Supporting children's education through study kits, school supplies, and learning resources |
-| 🏥 **Healthcare** | Providing access to medical assistance and health awareness for underserved communities |
-| 👴 **Senior Care** | Ensuring dignity and support for elderly individuals in need |
-| 🐾 **Animal Welfare** | Protecting and caring for stray and abandoned animals |
-| 🌱 **Environment** | Promoting tree plantation drives and environmental sustainability |
+| # | Program | Focus Area | Description |
+|---|---------|------------|-------------|
+| 01 | 📚 **Sarva Shiksha** | Education | Supporting underprivileged children with foundational study kits, books, and schooling mentorship |
+| 02 | 🐾 **Sarva Jeev Raksha** | Animal Welfare & Care | Protecting and feeding street animals, basic injury treatment, and community empathy drives |
+| 03 | 🍲 **Sarva Aahar** | Food & Hunger Support | Distributing nutritious cooked meals and emergency dry ration kits to struggling families |
+| 04 | 👴 **Sarva Vriddh Aashray** | Senior Citizen Care & Shelter | Ensuring dignity, primary healthcare, companionship, and shelter support for elderly individuals |
+| 05 | 🌸 **Sarva Shakti** | Women Empowerment | Skill development, menstrual hygiene distribution, self-help groups, and vocational awareness |
+| 06 | 🌱 **Sarva Hariyali** | Environmental Care | Urban tree plantation drives, neighborhood cleanups, and eco-friendly sustainability initiatives |
+| 07 | 🏥 **Sarva Swasthya** | Healthcare & Medical Support | Primary health camps, diagnostic screenings, free medicine distribution, and emergency aid |
+| 08 | 🤝 **Sarva Sahay** | Community & Emergency Support | Rapid disaster relief, emergency supplies, and humanitarian support for distressed families |
+| 09 | ⚙️ **Sarva Kaushal** | Skill Development & Livelihood | Job-oriented vocational training, career mentoring, and livelihood guidance for youth |
+| 10 | 💻 **Sarva Saksham** | Digital Literacy & Empowerment | Basic computer training, digital literacy workshops, and online learning enablement |
 
 ---
 
