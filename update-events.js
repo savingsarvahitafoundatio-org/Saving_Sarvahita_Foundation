@@ -56,7 +56,7 @@ const FOLDER_METADATA_PRESETS = {
     badgeColor: 'linear-gradient(135deg, #16A34A, #059669)',
     tagBg: 'rgba(22, 163, 74, 0.12)',
     tagColor: '#16A34A',
-    location: 'Dahisar East, Mumbai',
+    location: 'Borivali, Mumbai',
     beneficiaries: '100+ Dogs'
   },
   'animal-feeding-16-aug-2026': {
