@@ -48,20 +48,6 @@
 
 ---
 
-## 🏗️ Tech Stack
-
-This is a **static website** built with:
-
-| Technology | Purpose |
-|------------|---------|
-| ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) | Page structure & semantic markup |
-| ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) | Styling, animations & responsive design |
-| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) | Interactive components & UX logic |
-| ![Font Awesome](https://img.shields.io/badge/Font_Awesome-528DD7?style=flat&logo=fontawesome&logoColor=white) | Icon library |
-| ![Google Fonts](https://img.shields.io/badge/Google_Fonts-4285F4?style=flat&logo=google&logoColor=white) | Typography (Inter, Playfair Display) |
-
----
-
 ## 📁 Project Structure
 
 ```
