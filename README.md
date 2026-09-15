@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/logo-png.png" alt="Saving Sarvahita Foundation Logo" width="120" />
+<img src="assets/branding/logo.png" alt="Saving Sarvahita Foundation Logo" width="120" />
 
 # SAVING SARVAHITA FOUNDATION
 
@@ -68,23 +68,26 @@ This is a **static website** built with:
 Saving_Sarvahita_Foundation/
 ├── index.html              # Home page
 ├── about.html              # About Us, Leadership & Certificates
+├── gallery.html            # Drives & Events Gallery
 ├── contact.html            # Contact information & form
+├── blog.html               # Blog listing
 ├── style.css               # Global stylesheet (responsive)
 ├── script.js               # Interactive functionality
 └── assets/
-    ├── logo-png.png        # Official foundation logo
-    ├── banner.jpg          # Hero banner image
-    ├── education.png       # Education cause image
-    ├── health.png          # Healthcare cause image
-    ├── animal.png          # Animal welfare cause image
-    ├── tree.png            # Environment cause image
-    ├── Aakash Katti.jpeg   # Founder profile photo
-    ├── Vedant Pal.jpeg     # Director profile photo
-    ├── OR-Kotak.jpeg       # Kotak UPI QR code
-    ├── QR-GPAY.jpeg        # Primary GPay UPI QR code
-    ├── Sarvahita Part B Approval.jpg   # MCA Incorporation Certificate
-    ├── Sarvahita Pan.jpg               # Income Tax e-PAN Card
-    └── SAVING_SARVAHITA_FOUNDATION-1 Darpan.jpg  # NITI Aayog NGO Darpan
+    ├── branding/           # Official Logos & Banners
+    │   ├── logo.png
+    │   ├── banner.jpg
+    │   └── ...
+    ├── causes/             # Cause banners (Education, Healthcare, Environment)
+    ├── certificates/       # Legal & Compliance (Incorporation, PAN, Darpan)
+    ├── payments/           # UPI QR Codes (GPay, Kotak)
+    ├── team/               # Directors, Employees & Volunteers
+    │   ├── directors/
+    │   ├── employees/
+    │   └── volunteers/
+    └── events/             # Ground drive galleries
+        ├── animal-feeding-16-aug-2026/
+        └── study-kits/
 ```
 
 ---

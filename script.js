@@ -398,41 +398,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Gallery Filter System (Supporting Date Groups and Categories)
-  const filterBtns = document.querySelectorAll('.gallery-filter-btn');
-  const galleryItems = document.querySelectorAll('.gallery-item');
-  const dateGroups = document.querySelectorAll('.gallery-date-group');
+  // ==========================================================================
+  // DYNAMIC GALLERY & EVENTS ENGINE (OPTIMIZED & LAG-FREE)
+  // ==========================================================================
 
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+  const eventsData = window.SAVING_SARVAHITA_EVENTS;
 
-      const filter = btn.getAttribute('data-filter');
-
-      if (dateGroups.length > 0) {
-        dateGroups.forEach(group => {
-          const groupCat = group.getAttribute('data-category');
-          if (filter === 'all' || groupCat === filter) {
-            group.style.display = 'block';
-          } else {
-            group.style.display = 'none';
-          }
-        });
-      }
-
-      galleryItems.forEach(item => {
-        const cat = item.getAttribute('data-category');
-        if (filter === 'all' || cat === filter) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    });
-  });
-
-  // Lightbox Modal Logic for Gallery Photos
+  // Universal Lightbox Elements
   const lightboxModal = document.getElementById('lightboxModal');
   const lightboxImg = document.getElementById('lightboxImg');
   const lightboxCaption = document.getElementById('lightboxCaption');
@@ -444,43 +416,57 @@ document.addEventListener('DOMContentLoaded', () => {
   let activeGalleryItems = [];
 
   function updateActiveGalleryItems() {
-    activeGalleryItems = Array.from(galleryItems).filter(item => item.style.display !== 'none');
+    activeGalleryItems = Array.from(document.querySelectorAll('.gallery-item')).filter(item => {
+      const isVisible = item.style.display !== 'none' && (!item.closest('.gallery-date-group') || item.closest('.gallery-date-group').style.display !== 'none');
+      return isVisible;
+    });
   }
 
-  galleryItems.forEach(item => {
-    item.addEventListener('click', () => {
-      updateActiveGalleryItems();
-      currentGalleryIndex = activeGalleryItems.indexOf(item);
-      openLightboxItem(item);
-    });
-  });
-
   function openLightboxItem(item) {
-    if (!item) return;
-    const img = item.querySelector('img');
+    if (!item || !lightboxModal) return;
+    const mediaSrc = item.getAttribute('data-src') || (item.querySelector('img') ? item.querySelector('img').src : '');
     const title = item.querySelector('h4') ? item.querySelector('h4').textContent : '';
     const desc = item.querySelector('p') ? item.querySelector('p').textContent : '';
 
-    if (img && lightboxImg) {
-      lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt || title;
+    if (lightboxImg) {
+      lightboxImg.src = mediaSrc;
+      lightboxImg.alt = title || 'Event Photo';
+      lightboxImg.style.display = 'block';
     }
+
     if (lightboxCaption) {
       lightboxCaption.textContent = title ? `${title} - ${desc}` : desc;
     }
+
+    lightboxModal.classList.add('active');
+  }
+
+  function closeLightboxModal() {
     if (lightboxModal) {
-      lightboxModal.classList.add('active');
+      lightboxModal.classList.remove('active');
     }
   }
 
-  if (closeLightbox && lightboxModal) {
-    closeLightbox.addEventListener('click', () => {
-      lightboxModal.classList.remove('active');
+  function setupLightboxHandlers() {
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.onclick = (e) => {
+        e.preventDefault();
+        updateActiveGalleryItems();
+        currentGalleryIndex = activeGalleryItems.indexOf(item);
+        if (currentGalleryIndex === -1) currentGalleryIndex = 0;
+        openLightboxItem(item);
+      };
     });
+  }
 
+  if (closeLightbox) {
+    closeLightbox.addEventListener('click', closeLightboxModal);
+  }
+
+  if (lightboxModal) {
     lightboxModal.addEventListener('click', (e) => {
       if (e.target === lightboxModal) {
-        lightboxModal.classList.remove('active');
+        closeLightboxModal();
       }
     });
   }
@@ -509,11 +495,248 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('keydown', (e) => {
     if (lightboxModal && lightboxModal.classList.contains('active')) {
-      if (e.key === 'Escape') lightboxModal.classList.remove('active');
+      if (e.key === 'Escape') closeLightboxModal();
       if (e.key === 'ArrowLeft' && prevLightbox) prevLightbox.click();
       if (e.key === 'ArrowRight' && nextLightbox) nextLightbox.click();
     }
   });
+
+  // 1. RENDER FULL GALLERY PAGE WITH FAST SKELETON & LOADER TRANSITION
+  const dynamicGalleryContainer = document.getElementById('dynamicGalleryContainer');
+  if (dynamicGalleryContainer && eventsData && eventsData.events) {
+    renderDynamicGalleryPage(eventsData);
+  }
+
+  function renderDynamicGalleryPage(data) {
+    const { stats, events } = data;
+
+    // Build Category & Drive Filter Tabs
+    let filtersHtml = `
+      <div class="gallery-filters" id="galleryFilters" style="margin-bottom: 36px;">
+        <button class="gallery-filter-btn active" data-filter="all">
+          <i class="fa-solid fa-images"></i> All Drives (${stats.totalPhotos})
+        </button>
+    `;
+
+    events.forEach(ev => {
+      filtersHtml += `
+        <button class="gallery-filter-btn" data-filter="${ev.id}">
+          <i class="fa-solid ${ev.categoryIcon || 'fa-hand-holding-heart'}"></i> ${ev.date} • ${ev.title} (${ev.imageCount})
+        </button>
+      `;
+    });
+
+    filtersHtml += `</div>`;
+
+    // Build Date Groups and Media Grids
+    let groupsHtml = '';
+
+    events.forEach(ev => {
+      groupsHtml += `
+        <div class="gallery-date-group" id="group-${ev.id}" data-event-id="${ev.id}" data-category="${ev.category}">
+          <!-- Phone / Timeline Style Date Header -->
+          <div class="gallery-date-header">
+            <div class="gdh-left">
+              <div class="gdh-calendar-badge" style="background: ${ev.badgeColor || 'linear-gradient(135deg, #0E7490, #0369A1)'};">
+                <span class="gdh-day">${ev.day}</span>
+                <span class="gdh-month">${ev.month}</span>
+              </div>
+              <div class="gdh-info">
+                <h3 class="gdh-title">${ev.title}</h3>
+                <p class="gdh-meta">
+                  <span><i class="fa-solid fa-calendar-day"></i> ${ev.dateFull || ev.date}</span>
+                  <span>•</span>
+                  <span><i class="fa-solid fa-location-dot" style="color: #F97316;"></i> ${ev.location}</span>
+                  <span>•</span>
+                  <span class="gdh-program-tag" style="background: ${ev.tagBg || 'rgba(14, 116, 144, 0.12)'}; color: ${ev.tagColor || '#0E7490'};">
+                    <i class="fa-solid ${ev.categoryIcon || 'fa-paw'}"></i> ${ev.categoryName}
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Media Grid -->
+          <div class="gallery-grid">
+      `;
+
+      ev.media.forEach((item, idx) => {
+        const itemNumber = idx + 1;
+        const itemTitle = `${ev.title} #${itemNumber}`;
+
+        groupsHtml += `
+          <div class="gallery-item" data-type="image" data-src="${item.src}" data-category="${ev.category}" data-event-id="${ev.id}">
+            <img src="${item.src}" alt="${itemTitle}" loading="lazy" decoding="async" onload="this.classList.add('loaded')" onerror="this.parentElement.style.display='none'">
+            <div class="gallery-overlay">
+              <h4>${itemTitle}</h4>
+              <p>${ev.date} • ${ev.location}</p>
+            </div>
+          </div>
+        `;
+      });
+
+      groupsHtml += `
+          </div>
+        </div>
+      `;
+    });
+
+    // Seamlessly swap loader with rendered content
+    dynamicGalleryContainer.innerHTML = filtersHtml + groupsHtml;
+
+    // Hook up dynamic filters
+    const filterButtons = dynamicGalleryContainer.querySelectorAll('.gallery-filter-btn');
+    const dateGroups = dynamicGalleryContainer.querySelectorAll('.gallery-date-group');
+    const allGalleryItems = dynamicGalleryContainer.querySelectorAll('.gallery-item');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filterVal = btn.getAttribute('data-filter');
+
+        if (filterVal === 'all') {
+          dateGroups.forEach(g => g.style.display = 'block');
+          allGalleryItems.forEach(i => i.style.display = 'block');
+        } else {
+          dateGroups.forEach(g => {
+            const matchEvent = g.getAttribute('data-event-id') === filterVal;
+            const matchCat = g.getAttribute('data-category') === filterVal;
+            if (matchEvent || matchCat) {
+              g.style.display = 'block';
+              g.querySelectorAll('.gallery-item').forEach(i => i.style.display = 'block');
+            } else {
+              g.style.display = 'none';
+            }
+          });
+        }
+        updateActiveGalleryItems();
+      });
+    });
+
+    // Check URL Hash to auto-filter on load (e.g. gallery.html#05-09-26-dog-feeding)
+    const hash = window.location.hash ? window.location.hash.substring(1) : null;
+    if (hash) {
+      const targetBtn = Array.from(filterButtons).find(b => b.getAttribute('data-filter') === hash || b.getAttribute('data-filter') === hash.replace('group-', ''));
+      if (targetBtn) {
+        targetBtn.click();
+        const targetGroup = document.getElementById(hash.startsWith('group-') ? hash : `group-${hash}`);
+        if (targetGroup) {
+          setTimeout(() => targetGroup.scrollIntoView({ behavior: 'smooth' }), 200);
+        }
+      }
+    }
+
+    setupLightboxHandlers();
+  }
+
+  // 2. RENDER DYNAMIC EVENTS SECTION ON INDEX.HTML IF CONTAINER EXISTS
+  const dynamicEventsContainer = document.querySelector('.events-premium-grid');
+  if (dynamicEventsContainer && eventsData && eventsData.events) {
+    let eventsHtml = '';
+
+    eventsData.events.forEach((ev) => {
+      const coverSrc = ev.coverMedia ? ev.coverMedia.src : (ev.media[0] ? ev.media[0].src : '');
+      const statusBadge = `<div class="ep-card-status ep-status--completed"><i class="fa-solid fa-circle-check"></i> ${ev.date} Drive</div>`;
+      
+      let blogBtn = '';
+      if (ev.blogUrl) {
+        blogBtn = `
+          <a href="${ev.blogUrl}" class="btn btn-teal">
+            <i class="fa-solid fa-newspaper"></i> Read Blog Story
+          </a>
+        `;
+      }
+
+      eventsHtml += `
+        <article class="ep-card ep-card--completed" id="event-${ev.id}">
+          <div class="ep-card-banner">
+            <img src="${coverSrc}" alt="${ev.title}" loading="lazy" decoding="async" onerror="this.src='assets/events/study-kits/study-kit-01.webp'">
+            <div class="ep-card-banner-overlay"></div>
+            ${statusBadge}
+            <div class="ep-card-category-pill" style="background: rgba(14, 116, 144, 0.9);">
+              <i class="fa-solid ${ev.categoryIcon || 'fa-paw'}"></i> ${ev.categoryName}
+            </div>
+          </div>
+
+          <div class="ep-card-body">
+            <div class="ep-card-meta-row">
+              <span class="ep-meta-item">
+                <i class="fa-solid fa-calendar-check" style="color: #10B981;"></i>
+                ${ev.date}
+              </span>
+              <span class="ep-meta-divider">•</span>
+              <span class="ep-meta-item">
+                <i class="fa-solid fa-location-dot" style="color: #F97316;"></i>
+                ${ev.location}
+              </span>
+            </div>
+
+            <h3 class="ep-card-title">${ev.title}</h3>
+            <p class="ep-card-desc">${ev.desc}</p>
+
+            <div class="ep-impact-row">
+              <div class="ep-impact-chip">
+                <span class="ep-impact-num">${ev.imageCount}+</span>
+                <span class="ep-impact-lbl">Photos</span>
+              </div>
+              <div class="ep-impact-chip">
+                <span class="ep-impact-num">${ev.beneficiaries || '100%'}</span>
+                <span class="ep-impact-lbl">Impact Reach</span>
+              </div>
+            </div>
+
+            <div class="ep-card-actions">
+              ${blogBtn}
+              <a href="gallery.html#${ev.id}" class="btn btn-teal">
+                <i class="fa-solid fa-images"></i> View Event Gallery
+              </a>
+              <button class="btn btn-orange trigger-donate">
+                <i class="fa-solid fa-heart"></i> Sponsor Next
+              </button>
+            </div>
+          </div>
+        </article>
+      `;
+    });
+
+    dynamicEventsContainer.innerHTML = eventsHtml;
+  }
+
+  // 3. HOMEPAGE GALLERY PREVIEW SETUP & FILTERS (BALANCED 6 HIGHLIGHTS)
+  const homeGallerySection = document.getElementById('gallery');
+  if (homeGallerySection) {
+    const homeFilterBtns = homeGallerySection.querySelectorAll('.gallery-filter-btn');
+    const homeItems = homeGallerySection.querySelectorAll('.gallery-item');
+
+    homeFilterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        homeFilterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        homeItems.forEach(item => {
+          const itemCat = item.getAttribute('data-category');
+          if (filter === 'all' || itemCat === filter) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+        updateActiveGalleryItems();
+      });
+    });
+
+    // Update Full Gallery Link button count dynamically
+    const fullGalleryLink = homeGallerySection.querySelector('a[href="gallery.html"]');
+    if (fullGalleryLink && eventsData && eventsData.stats) {
+      fullGalleryLink.innerHTML = `<i class="fa-solid fa-images"></i> View Full Photo Gallery (${eventsData.stats.totalPhotos || 119}+ Photos) <i class="fa-solid fa-arrow-right"></i>`;
+    }
+  }
+
+  // Re-bind click handlers for all gallery items
+  setupLightboxHandlers();
 
   // Toast Notification System
   function showToast(message) {

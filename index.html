@@ -8,12 +8,12 @@
   <meta name="keywords" content="New NGO Mumbai, Saving Sarvahita Foundation, Animal Care, Child Education, Healthcare Aid, Charity India, Donate NGO">
   
   <!-- Favicon & Social Share Icons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/logo-png.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/logo-png.png">
-  <link rel="shortcut icon" type="image/png" href="assets/logo-png.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/logo-png.png">
-  <meta property="og:image" content="assets/logo-png.png">
-  <meta name="twitter:image" content="assets/logo-png.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/branding/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/branding/logo.png">
+  <link rel="shortcut icon" type="image/png" href="assets/branding/logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/branding/logo.png">
+  <meta property="og:image" content="assets/branding/logo.png">
+  <meta name="twitter:image" content="assets/branding/logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -49,7 +49,7 @@
   <nav class="main-header">
     <div class="header-container">
       <a href="#home" class="logo-brand">
-        <img src="assets/logo-png.png" alt="Saving Sarvahita Foundation Logo" class="logo-img">
+        <img src="assets/branding/logo.png" alt="Saving Sarvahita Foundation Logo" class="logo-img">
         <div class="logo-text-group">
           <span class="logo-title">SAVING SARVAHITA</span>
           <span class="logo-subtitle">F O U N D A T I O N</span>
@@ -141,7 +141,7 @@
 
       <div class="hero-media">
         <div class="hero-img-card">
-          <img src="assets/education.png" alt="Saving Sarvahita Foundation Launch Initiative">
+          <img src="assets/causes/education.png" alt="Saving Sarvahita Foundation Launch Initiative">
           <div class="hero-badge-overlay">
             <div class="hero-badge-icon">
               <i class="fa-solid fa-hands-holding-heart"></i>
@@ -342,7 +342,7 @@
         <!-- UPCOMING EVENT CARD: ANIMAL FEEDING DRIVE -->
         <article class="ep-card" style="border: 2px solid rgba(14, 116, 144, 0.35); box-shadow: 0 8px 30px rgba(14, 116, 144, 0.12);">
           <div class="ep-card-banner">
-            <img src="assets/AnimalFeeding/000e0d9e-a153-4bce-9d0d-96ba43e60437.webp" alt="Upcoming Street Animal Feeding Drive">
+            <img src="assets/events/animal-feeding-16-aug-2026/animal-feeding-01.webp" alt="Upcoming Street Animal Feeding Drive">
             <div class="ep-card-banner-overlay"></div>
             <div class="ep-card-status ep-status--upcoming" style="background: #0E7490; color: white;">
               <i class="fa-solid fa-bullhorn"></i> Upcoming This Week
@@ -395,7 +395,7 @@
         <!-- COMPLETED EVENT CARD -->
         <article class="ep-card ep-card--completed">
           <div class="ep-card-banner">
-            <img src="assets/Study Kits Distribution - 02-08-26/IMG_20260802_133026.jpg.webp" alt="Study Kit Distribution Drive at Maranatha Orphanage">
+            <img src="assets/events/study-kits/study-kit-01.webp" alt="Study Kit Distribution Drive at Maranatha Orphanage">
             <div class="ep-card-banner-overlay"></div>
             <div class="ep-card-status ep-status--completed">
               <i class="fa-solid fa-circle-check"></i> Completed Drive
@@ -455,7 +455,7 @@
         <!-- COMPLETED EVENT CARD: ANIMAL FEEDING & HUNGER SUPPORT -->
         <article class="ep-card ep-card--completed">
           <div class="ep-card-banner">
-            <img src="assets/AnimalFeeding/51592ec9-a363-4685-bce1-e4bc85e2571c.webp" alt="Street Animal Hunger Support & Feeding Drive Across Mumbai Suburbs">
+            <img src="assets/events/animal-feeding-16-aug-2026/animal-feeding-06.webp" alt="Street Animal Hunger Support & Feeding Drive Across Mumbai Suburbs">
             <div class="ep-card-banner-overlay"></div>
             <div class="ep-card-status ep-status--completed">
               <i class="fa-solid fa-circle-check"></i> Completed Drive
@@ -624,65 +624,71 @@
 
       <!-- Gallery Category Filter Tabs -->
       <div class="gallery-filters">
-        <button class="gallery-filter-btn active" data-filter="all">All Drive Photos</button>
-        <button class="gallery-filter-btn" data-filter="study-kits">Study Kits Distribution Drive</button>
-        <button class="gallery-filter-btn" data-filter="hunger-support">Street Animal Feeding Drive</button>
+        <button class="gallery-filter-btn active" data-filter="all">All Highlights</button>
+        <button class="gallery-filter-btn" data-filter="study-kits"><i class="fa-solid fa-graduation-cap"></i> Study Kits Drive</button>
+        <button class="gallery-filter-btn" data-filter="hunger-support"><i class="fa-solid fa-paw"></i> Dog & Cat Feeding Drives</button>
       </div>
 
-      <!-- Gallery Preview Grid (6 Curated Highlights) -->
+      <!-- Gallery Preview Grid (6 Curated Highlights in 3x2 Grid) -->
       <div class="gallery-grid">
         
-        <!-- Study Kits Drive Highlight 1 -->
-        <div class="gallery-item" data-category="study-kits">
-          <img src="assets/Study Kits Distribution - 02-08-26/IMG_20260802_133026.jpg.webp" alt="Study Kit Distribution Ceremony For 22 Children">
+        <!-- Highlight 1: Study Kits Distribution -->
+        <div class="gallery-item" data-category="study-kits" data-src="assets/events/study-kits/study-kit-01.webp">
+          <span class="gallery-category-pill"><i class="fa-solid fa-graduation-cap" style="color: #38BDF8;"></i> Sarva Shiksha</span>
+          <img src="assets/events/study-kits/study-kit-01.webp" alt="Study Kit Distribution Ceremony For 22 Children" loading="lazy" decoding="async" onload="this.classList.add('loaded')">
           <div class="gallery-overlay">
             <h4>Study Kit Distribution Ceremony</h4>
-            <p>22 Children at Maranatha Orphanage Society</p>
+            <p>22 Children Supported at Maranatha Orphanage Society</p>
           </div>
         </div>
 
-        <!-- Study Kits Drive Highlight 2 -->
-        <div class="gallery-item" data-category="study-kits">
-          <img src="assets/Study Kits Distribution - 02-08-26/IMG_20260802_133509.jpg.webp" alt="Children Smiling with New Study Kits">
+        <!-- Highlight 2: Dog & Cat Feeding 05-09-2026 -->
+        <div class="gallery-item" data-category="hunger-support" data-src="assets/events/05-09-26 Dog and Cat Feeding/IMG-20260905-WA0020.jpg.webp">
+          <span class="gallery-category-pill"><i class="fa-solid fa-paw" style="color: #4ADE80;"></i> Sarva Jeev Raksha</span>
+          <img src="assets/events/05-09-26 Dog and Cat Feeding/IMG-20260905-WA0020.jpg.webp" alt="Street Dog & Cat Feeding & Nourishment Drive" loading="lazy" decoding="async" onload="this.classList.add('loaded')">
           <div class="gallery-overlay">
-            <h4>Happy Smiles & Learning Hope</h4>
-            <p>Study Kit Distribution Drive, Chembur</p>
+            <h4>Street Dog & Cat Feeding Drive</h4>
+            <p>05 Sep 2026 • Dahisar & Mumbai Suburbs</p>
           </div>
         </div>
 
-        <!-- Study Kits Drive Highlight 3 -->
-        <div class="gallery-item" data-category="study-kits">
-          <img src="assets/Study Kits Distribution - 02-08-26/IMG_20260802_133733.jpg.webp" alt="Group Photo with Children & Team">
+        <!-- Highlight 3: Cat Care 05-09-2026 -->
+        <div class="gallery-item" data-category="hunger-support" data-src="assets/events/05-09-26 Dog and Cat Feeding/IMG_20260829_071630_1.webp">
+          <span class="gallery-category-pill"><i class="fa-solid fa-cat" style="color: #2DD4BF;"></i> Cat Welfare</span>
+          <img src="assets/events/05-09-26 Dog and Cat Feeding/IMG_20260829_071630_1.webp" alt="Stray Cat Feeding & Neighborhood Care" loading="lazy" decoding="async" onload="this.classList.add('loaded')">
+          <div class="gallery-overlay">
+            <h4>Stray Cat Feeding & Care</h4>
+            <p>05 Sep 2026 • Neighborhood Feline Care</p>
+          </div>
+        </div>
+
+        <!-- Highlight 4: Dog Feeding 26-08-2026 -->
+        <div class="gallery-item" data-category="hunger-support" data-src="assets/events/26-08-26 Dog Feeding/IMG_20260826_081626.webp">
+          <span class="gallery-category-pill"><i class="fa-solid fa-paw" style="color: #4ADE80;"></i> Street Pack Care</span>
+          <img src="assets/events/26-08-26 Dog Feeding/IMG_20260826_081626.webp" alt="Mid-Week Street Dog Feeding Drive" loading="lazy" decoding="async" onload="this.classList.add('loaded')">
+          <div class="gallery-overlay">
+            <h4>Mid-Week Dog Care Run</h4>
+            <p>26 Aug 2026 • Dahisar East, Mumbai</p>
+          </div>
+        </div>
+
+        <!-- Highlight 5: Study Kits Group Photo -->
+        <div class="gallery-item" data-category="study-kits" data-src="assets/events/study-kits/study-kit-10.webp">
+          <span class="gallery-category-pill"><i class="fa-solid fa-graduation-cap" style="color: #38BDF8;"></i> Orphanage Drive</span>
+          <img src="assets/events/study-kits/study-kit-10.webp" alt="Group Photo with Children & Team" loading="lazy" decoding="async" onload="this.classList.add('loaded')">
           <div class="gallery-overlay">
             <h4>Group Photo with Children & Team</h4>
-            <p>Chembur West, Mumbai Drive Highlights</p>
+            <p>02 Aug 2026 • Chembur West, Mumbai</p>
           </div>
         </div>
 
-        <!-- Street Animal Feeding Highlight 1 -->
-        <div class="gallery-item" data-category="hunger-support">
-          <img src="assets/AnimalFeeding/000e0d9e-a153-4bce-9d0d-96ba43e60437.webp" alt="Volunteer feeding nutritious meal bowls to stray dog">
+        <!-- Highlight 6: Animal Feeding 16-08-2026 -->
+        <div class="gallery-item" data-category="hunger-support" data-src="assets/events/animal-feeding-16-aug-2026/animal-feeding-06.webp">
+          <span class="gallery-category-pill"><i class="fa-solid fa-paw" style="color: #4ADE80;"></i> Compassion Drive</span>
+          <img src="assets/events/animal-feeding-16-aug-2026/animal-feeding-06.webp" alt="Serving hygienic meals across Mumbai" loading="lazy" decoding="async" onload="this.classList.add('loaded')">
           <div class="gallery-overlay">
-            <h4>Compassionate Care</h4>
-            <p>Volunteer feeding nutritious meal bowl to stray dog</p>
-          </div>
-        </div>
-
-        <!-- Street Animal Feeding Highlight 2 -->
-        <div class="gallery-item" data-category="hunger-support">
-          <img src="assets/AnimalFeeding/296e0c4e-782a-4ec6-93cf-6ad226c98084.webp" alt="Saving Sarvahita team feeding hungry strays in Mumbai">
-          <div class="gallery-overlay">
-            <h4>Volunteer Dedication</h4>
-            <p>Saving Sarvahita team feeding hungry strays in Mumbai</p>
-          </div>
-        </div>
-
-        <!-- Street Animal Feeding Highlight 3 -->
-        <div class="gallery-item" data-category="hunger-support">
-          <img src="assets/AnimalFeeding/c68b7b81-1977-4ef2-ad5d-de7e03697730.webp" alt="Engaging local youth in compassionate animal welfare">
-          <div class="gallery-overlay">
-            <h4>Youth Volunteer Drive</h4>
-            <p>Engaging local youth in compassionate animal welfare</p>
+            <h4>Nourishing Street Lives</h4>
+            <p>16 Aug 2026 • Mumbai Suburbs Feeding</p>
           </div>
         </div>
 
@@ -691,7 +697,7 @@
       <!-- Redirect to Full Gallery CTA -->
       <div style="text-align: center; margin-top: 36px;">
         <a href="gallery.html" class="btn btn-teal" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 36px; font-size: 1rem; font-weight: 800; border-radius: 50px; text-decoration: none; box-shadow: 0 10px 25px rgba(14, 116, 144, 0.25); transition: all 0.3s ease;">
-          <i class="fa-solid fa-images"></i> View Full Photo Gallery (30+ Photos) <i class="fa-solid fa-arrow-right"></i>
+          <i class="fa-solid fa-images"></i> View Full Photo Gallery (77+ Photos) <i class="fa-solid fa-arrow-right"></i>
         </a>
       </div>
 
@@ -714,7 +720,7 @@
         <!-- Blog Card 1: Completed Study Kit Event -->
         <article class="blog-card">
           <div class="blog-card-img">
-            <img src="assets/Study Kits Distribution - 02-08-26/IMG_20260802_133026.jpg.webp" alt="Study Kit Distribution Drive">
+            <img src="assets/events/study-kits/study-kit-01.webp" alt="Study Kit Distribution Drive">
             <span class="blog-card-category" style="background: #10B981;">COMPLETED DRIVE</span>
           </div>
           <div class="blog-card-body">
@@ -738,7 +744,7 @@
         <!-- Blog Card 2: Completed Animal Feeding Drive -->
         <article class="blog-card">
           <div class="blog-card-img">
-            <img src="assets/AnimalFeeding/51592ec9-a363-4685-bce1-e4bc85e2571c.webp" alt="Street Animal Hunger Support & Feeding Drive">
+            <img src="assets/events/animal-feeding-16-aug-2026/animal-feeding-06.webp" alt="Street Animal Hunger Support & Feeding Drive">
             <span class="blog-card-category" style="background: #10B981;">COMPLETED DRIVE</span>
           </div>
           <div class="blog-card-body">
@@ -762,7 +768,7 @@
         <!-- Blog Card 3: Foundation Compliance & Transparency -->
         <article class="blog-card">
           <div class="blog-card-img">
-            <img src="assets/SAVING_SARVAHITA_FOUNDATION-1 Darpan.jpg" alt="Government Compliance & Transparency">
+            <img src="assets/certificates/ngo-darpan.jpg" alt="Government Compliance & Transparency">
             <span class="blog-card-category" style="background: #F97316;">TRANSPARENCY</span>
           </div>
           <div class="blog-card-body">
@@ -812,7 +818,7 @@
     <div class="footer-container">
       <div class="footer-col-brand">
         <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
-          <img src="assets/logo-png.png" alt="Saving Sarvahita Foundation Logo" style="height: 58px; width: auto; border-radius: 50%; background: white; padding: 2px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+          <img src="assets/branding/logo.png" alt="Saving Sarvahita Foundation Logo" style="height: 58px; width: auto; border-radius: 50%; background: white; padding: 2px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
           <div>
             <h3 class="footer-brand-title" style="margin-bottom: 2px;">SAVING SARVAHITA</h3>
             <span style="font-size: 0.75rem; color: #38BDF8; font-weight: 700; letter-spacing: 0.08em;">F O U N D A T I O N</span>
@@ -878,7 +884,7 @@
       <div>
         <h4 class="footer-col-title">SCAN & DONATE</h4>
         <div style="background: white; padding: 14px; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.15); display: inline-block;">
-          <img src="assets/QR-GPAY.jpeg" alt="Primary UPI QR Code - Saving Sarvahita Foundation" style="width: 115px; height: auto; border-radius: 8px; display: block; margin: 0 auto 6px;">
+          <img src="assets/payments/qr-gpay.jpeg" alt="Primary UPI QR Code - Saving Sarvahita Foundation" style="width: 115px; height: auto; border-radius: 8px; display: block; margin: 0 auto 6px;">
           <div style="font-size: 0.72rem; font-weight: 700; color: #0F172A; font-family: monospace; background: #F1F5F9; padding: 3px 6px; border-radius: 4px;">8828428845@okbizaxis</div>
           <span style="display: block; font-size: 0.65rem; color: #059669; font-weight: 600; margin-top: 4px;"><i class="fa-solid fa-bolt"></i> Instant GPay / UPI</span>
         </div>
@@ -918,7 +924,7 @@
           <i class="fa-brands fa-google-pay" style="font-size: 0.95rem; vertical-align: middle;"></i> Primary Payment QR
         </div>
         
-        <img src="assets/QR-GPAY.jpeg" alt="Official UPI QR Code - Saving Sarvahita Foundation" style="width: 220px; height: auto; margin: 0 auto 14px; display: block; border: 4px solid white; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.1);">
+        <img src="assets/payments/qr-gpay.jpeg" alt="Official UPI QR Code - Saving Sarvahita Foundation" style="width: 220px; height: auto; margin: 0 auto 14px; display: block; border: 4px solid white; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.1);">
         
         <div style="background: white; padding: 10px 14px; border-radius: 10px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #E2E8F0; margin-bottom: 10px;">
           <i class="fa-solid fa-qrcode" style="color: #0E7490; font-size: 1.1rem;"></i>
@@ -937,7 +943,7 @@
 
         <div id="altQRBox" style="display: none; margin-top: 12px; background: #FFFBEB; padding: 16px; border-radius: 12px; border: 1px solid #FDE68A;">
           <span style="font-size: 0.78rem; font-weight: 700; color: #92400E; display: block; margin-bottom: 8px;">Kotak Mahindra Bank UPI QR</span>
-          <img src="assets/OR-Kotak.jpeg" alt="Kotak Bank UPI QR Code" style="width: 170px; height: auto; margin: 0 auto 10px; display: block; border: 3px solid white; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.06);">
+          <img src="assets/payments/qr-kotak.jpeg" alt="Kotak Bank UPI QR Code" style="width: 170px; height: auto; margin: 0 auto 10px; display: block; border: 3px solid white; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.06);">
           <div style="background: white; padding: 6px 10px; border-radius: 8px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #FDE68A;">
             <span style="font-size: 0.8rem; font-family: monospace; font-weight: 700; color: #0F172A;">savingsarvahita2026@kotak</span>
             <button type="button" onclick="navigator.clipboard.writeText('savingsarvahita2026@kotak'); alert('UPI ID savingsarvahita2026@kotak copied!');" style="background: #FEF3C7; color: #92400E; border: none; padding: 3px 8px; border-radius: 4px; font-weight: 700; cursor: pointer; font-size: 0.72rem;">Copy</button>
@@ -1021,11 +1027,13 @@
       <button class="lightbox-nav lightbox-prev" id="prevLightbox"><i class="fa-solid fa-chevron-left"></i></button>
       <button class="lightbox-nav lightbox-next" id="nextLightbox"><i class="fa-solid fa-chevron-right"></i></button>
       <img src="" alt="Gallery Image" class="lightbox-img" id="lightboxImg">
+      <video id="lightboxVideo" class="lightbox-video" controls playsinline style="display: none;"></video>
       <div class="lightbox-caption" id="lightboxCaption"></div>
     </div>
   </div>
 
   <!-- JavaScript -->
+  <script src="assets/events/events-data.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,767 @@
+{
+  "generatedAt": "2026-09-15T17:02:23.287Z",
+  "stats": {
+    "totalDrives": 4,
+    "totalPhotos": 77,
+    "totalVideos": 0,
+    "totalMedia": 77
+  },
+  "events": [
+    {
+      "id": "05-09-26-dog-and-cat-feeding",
+      "folderName": "05-09-26 Dog and Cat Feeding",
+      "title": "Street Dog & Cat Feeding & Nourishment Drive",
+      "subtitle": "Providing wholesome cooked meals, fresh milk, and nutritious treats to stray dogs and cats",
+      "date": "05 Sep 2026",
+      "dateFull": "Saturday, 05 September 2026",
+      "day": "05",
+      "month": "SEP",
+      "year": "2026",
+      "sortDate": "2026-09-05",
+      "category": "hunger-support",
+      "categoryName": "Sarva Jeev Raksha",
+      "categoryIcon": "fa-paw",
+      "badgeColor": "linear-gradient(135deg, #16A34A, #059669)",
+      "tagBg": "rgba(22, 163, 74, 0.12)",
+      "tagColor": "#16A34A",
+      "location": "Dahisar & Mumbai Suburbs",
+      "desc": "Our dedicated volunteers covered local street corners and residential pockets, serving fresh meals, milk, biscuits, and hydration to hungry street dogs and stray cats.",
+      "beneficiaries": "110+ Animals",
+      "blogUrl": null,
+      "imageCount": 22,
+      "videoCount": 0,
+      "totalCount": 22,
+      "coverMedia": {
+        "id": "media-05-09-26-dog-and-cat-feeding-IMG-20260829-071630-1-webp",
+        "type": "image",
+        "src": "assets/events/05-09-26 Dog and Cat Feeding/IMG_20260829_071630_1.webp",
+        "filename": "IMG_20260829_071630_1.webp",
+        "title": "Drive Moment",
+        "desc": "On-ground drive photo capture"
+      },
+      "media": [
+        {
+          "id": "media-05-09-26-dog-and-cat-feeding-IMG-20260829-071630-1-webp",
+          "type": "image",
+          "src": "assets/events/05-09-26 Dog and Cat Feeding/IMG_20260829_071630_1.webp",
+          "filename": "IMG_20260829_071630_1.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-05-09-26-dog-and-cat-feeding-IMG-20260829-071655-1-webp",
+          "type": "image",
+          "src": "assets/events/05-09-26 Dog and Cat Feeding/IMG_20260829_071655_1.webp",
+          "filename": "IMG_20260829_071655_1.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-05-09-26-dog-and-cat-feeding-IMG-20260829-071700-1-webp",
+          "type": "image",
+          "src": "assets/events/05-09-26 Dog and Cat Feeding/IMG_20260829_071700_1.webp",
+          "filename": "IMG_20260829_071700_1.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-05-09-26-dog-and-cat-feeding-IMG-20260829-072347-1-webp",
+          "type": "image",
+          "src": "assets/events/05-09-26 Dog and Cat Feeding/IMG_20260829_072347_1.webp",
+          "filename": "IMG_20260829_072347_1.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-05-09-26-dog-and-cat-feeding-IMG-20260905-WA0020-jpg-webp",
+          "type": "image",
+          "src": "assets/events/05-09-26 Dog and Cat Feeding/IMG-20260905-WA0020.jpg.webp",
+          "filename": "IMG-20260905-WA0020.jpg.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-05-09-26-dog-and-cat-feeding-IMG-20260905-WA0021-jpg-webp",
+          "type": "image",
+          "src": "assets/events/05-09-26 Dog and Cat Feeding/IMG-20260905-WA0021.jpg.webp",
+          "filename": "IMG-20260905-WA0021.jpg.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-05-09-26-dog-and-cat-feeding-IMG-20260905-WA0024-jpg-webp",
+          "type": "image",
+          "src": "assets/events/05-09-26 Dog and Cat Feeding/IMG-20260905-WA0024.jpg.webp",
+          "filename": "IMG-20260905-WA0024.jpg.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-05-09-26-dog-and-cat-feeding-IMG-20260905-WA0025-jpg-webp",
+          "type": "image",
+          "src": "assets/events/05-09-26 Dog and Cat Feeding/IMG-20260905-WA0025.jpg.webp",
+          "filename": "IMG-20260905-WA0025.jpg.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-05-09-26-dog-and-cat-feeding-IMG-20260905-WA0027-jpg-webp",
+          "type": "image",
+          "src": "assets/events/05-09-26 Dog and Cat Feeding/IMG-20260905-WA0027.jpg.webp",
+          "filename": "IMG-20260905-WA0027.jpg.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-05-09-26-dog-and-cat-feeding-IMG-20260905-WA0030-jpg-webp",
+          "type": "image",
+          "src": "assets/events/05-09-26 Dog and Cat Feeding/IMG-20260905-WA0030.jpg.webp",
+          "filename": "IMG-20260905-WA0030.jpg.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-05-09-26-dog-and-cat-feeding-IMG-20260905-WA0032-jpg-webp",
+          "type": "image",
+          "src": "assets/events/05-09-26 Dog and Cat Feeding/IMG-20260905-WA0032.jpg.webp",
+          "filename": "IMG-20260905-WA0032.jpg.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-05-09-26-dog-and-cat-feeding-IMG-20260905-WA0033-jpg-webp",
+          "type": "image",
+          "src": "assets/events/05-09-26 Dog and Cat Feeding/IMG-20260905-WA0033.jpg.webp",
+          "filename": "IMG-20260905-WA0033.jpg.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-05-09-26-dog-and-cat-feeding-IMG-20260905-WA0035-jpg-webp",
+          "type": "image",
+          "src": "assets/events/05-09-26 Dog and Cat Feeding/IMG-20260905-WA0035.jpg.webp",
+          "filename": "IMG-20260905-WA0035.jpg.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-05-09-26-dog-and-cat-feeding-IMG-20260905-WA0039-jpg-webp",
+          "type": "image",
+          "src": "assets/events/05-09-26 Dog and Cat Feeding/IMG-20260905-WA0039.jpg.webp",
+          "filename": "IMG-20260905-WA0039.jpg.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-05-09-26-dog-and-cat-feeding-IMG-20260905-WA0044-jpg-webp",
+          "type": "image",
+          "src": "assets/events/05-09-26 Dog and Cat Feeding/IMG-20260905-WA0044.jpg.webp",
+          "filename": "IMG-20260905-WA0044.jpg.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-05-09-26-dog-and-cat-feeding-IMG-20260905-WA0067-jpg-webp",
+          "type": "image",
+          "src": "assets/events/05-09-26 Dog and Cat Feeding/IMG-20260905-WA0067.jpg.webp",
+          "filename": "IMG-20260905-WA0067.jpg.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-05-09-26-dog-and-cat-feeding-IMG-20260905-WA0069-jpg-webp",
+          "type": "image",
+          "src": "assets/events/05-09-26 Dog and Cat Feeding/IMG-20260905-WA0069.jpg.webp",
+          "filename": "IMG-20260905-WA0069.jpg.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-05-09-26-dog-and-cat-feeding-IMG-20260905-WA0073-jpg-webp",
+          "type": "image",
+          "src": "assets/events/05-09-26 Dog and Cat Feeding/IMG-20260905-WA0073.jpg.webp",
+          "filename": "IMG-20260905-WA0073.jpg.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-05-09-26-dog-and-cat-feeding-IMG-20260905-WA0074-jpg-webp",
+          "type": "image",
+          "src": "assets/events/05-09-26 Dog and Cat Feeding/IMG-20260905-WA0074.jpg.webp",
+          "filename": "IMG-20260905-WA0074.jpg.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-05-09-26-dog-and-cat-feeding-IMG-20260905-WA0075-jpg-webp",
+          "type": "image",
+          "src": "assets/events/05-09-26 Dog and Cat Feeding/IMG-20260905-WA0075.jpg.webp",
+          "filename": "IMG-20260905-WA0075.jpg.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-05-09-26-dog-and-cat-feeding-IMG-20260905-WA0076-jpg-webp",
+          "type": "image",
+          "src": "assets/events/05-09-26 Dog and Cat Feeding/IMG-20260905-WA0076.jpg.webp",
+          "filename": "IMG-20260905-WA0076.jpg.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-05-09-26-dog-and-cat-feeding-IMG-20260905-WA0077-jpg-webp",
+          "type": "image",
+          "src": "assets/events/05-09-26 Dog and Cat Feeding/IMG-20260905-WA0077.jpg.webp",
+          "filename": "IMG-20260905-WA0077.jpg.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        }
+      ]
+    },
+    {
+      "id": "26-08-26-dog-feeding",
+      "folderName": "26-08-26 Dog Feeding",
+      "title": "Mid-Week Street Dog Hunger Support & Community Care Drive",
+      "subtitle": "Reaching pack dogs across suburban corners with nutritious meals and biscuits",
+      "date": "26 Aug 2026",
+      "dateFull": "Wednesday, 26 August 2026",
+      "day": "26",
+      "month": "AUG",
+      "year": "2026",
+      "sortDate": "2026-08-26",
+      "category": "hunger-support",
+      "categoryName": "Sarva Jeev Raksha",
+      "categoryIcon": "fa-paw",
+      "badgeColor": "linear-gradient(135deg, #16A34A, #059669)",
+      "tagBg": "rgba(22, 163, 74, 0.12)",
+      "tagColor": "#16A34A",
+      "location": "Dahisar East, Mumbai",
+      "desc": "Extensive morning feeding run reaching numerous pack dogs, with comprehensive photo documentations of our volunteers in action.",
+      "beneficiaries": "100+ Dogs",
+      "blogUrl": null,
+      "imageCount": 28,
+      "videoCount": 0,
+      "totalCount": 28,
+      "coverMedia": {
+        "id": "media-26-08-26-dog-feeding-IMG-20260826-080622-webp",
+        "type": "image",
+        "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_080622.webp",
+        "filename": "IMG_20260826_080622.webp",
+        "title": "Drive Moment",
+        "desc": "On-ground drive photo capture"
+      },
+      "media": [
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-080622-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_080622.webp",
+          "filename": "IMG_20260826_080622.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-080638-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_080638.webp",
+          "filename": "IMG_20260826_080638.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-080939-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_080939.webp",
+          "filename": "IMG_20260826_080939.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-080951-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_080951.webp",
+          "filename": "IMG_20260826_080951.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-081007-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_081007.webp",
+          "filename": "IMG_20260826_081007.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-081259-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_081259.webp",
+          "filename": "IMG_20260826_081259.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-081613-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_081613.webp",
+          "filename": "IMG_20260826_081613.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-081617-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_081617.webp",
+          "filename": "IMG_20260826_081617.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-081619-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_081619.webp",
+          "filename": "IMG_20260826_081619.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-081621-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_081621.webp",
+          "filename": "IMG_20260826_081621.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-081624-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_081624.webp",
+          "filename": "IMG_20260826_081624.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-081626-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_081626.webp",
+          "filename": "IMG_20260826_081626.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-081646-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_081646.webp",
+          "filename": "IMG_20260826_081646.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-081649-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_081649.webp",
+          "filename": "IMG_20260826_081649.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-081653-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_081653.webp",
+          "filename": "IMG_20260826_081653.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-081713-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_081713.webp",
+          "filename": "IMG_20260826_081713.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-081719-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_081719.webp",
+          "filename": "IMG_20260826_081719.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-081722-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_081722.webp",
+          "filename": "IMG_20260826_081722.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-081733-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_081733.webp",
+          "filename": "IMG_20260826_081733.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-082045-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_082045.webp",
+          "filename": "IMG_20260826_082045.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-082104-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_082104.webp",
+          "filename": "IMG_20260826_082104.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-082135-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_082135.webp",
+          "filename": "IMG_20260826_082135.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-084113-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_084113.webp",
+          "filename": "IMG_20260826_084113.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-084115-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_084115.webp",
+          "filename": "IMG_20260826_084115.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-084143-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_084143.webp",
+          "filename": "IMG_20260826_084143.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-084516-1-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_084516_1.webp",
+          "filename": "IMG_20260826_084516_1.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-084710-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_084710.webp",
+          "filename": "IMG_20260826_084710.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-26-08-26-dog-feeding-IMG-20260826-112430-webp",
+          "type": "image",
+          "src": "assets/events/26-08-26 Dog Feeding/IMG_20260826_112430.webp",
+          "filename": "IMG_20260826_112430.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        }
+      ]
+    },
+    {
+      "id": "animal-feeding-16-aug-2026",
+      "folderName": "animal-feeding-16-aug-2026",
+      "title": "Street Animal Hunger Support & Feeding Drive",
+      "subtitle": "Founding community feeding initiative across suburban Mumbai street corners",
+      "date": "16 Aug 2026",
+      "dateFull": "Sunday, 16 August 2026",
+      "day": "16",
+      "month": "AUG",
+      "year": "2026",
+      "sortDate": "2026-08-16",
+      "category": "hunger-support",
+      "categoryName": "Sarva Jeev Raksha",
+      "categoryIcon": "fa-paw",
+      "badgeColor": "linear-gradient(135deg, #16A34A, #059669)",
+      "tagBg": "rgba(22, 163, 74, 0.12)",
+      "tagColor": "#16A34A",
+      "location": "Dahisar & Mumbai Suburbs",
+      "desc": "Our volunteer squad fed over 100+ voiceless street dogs, distributing nutritious meals, high-energy biscuits, and fresh milk across Mumbai street corners.",
+      "beneficiaries": "100+ Animals",
+      "blogUrl": "blog-animal-feeding-hunger-support.html",
+      "imageCount": 16,
+      "videoCount": 0,
+      "totalCount": 16,
+      "coverMedia": {
+        "id": "media-animal-feeding-16-aug-2026-animal-feeding-01-webp",
+        "type": "image",
+        "src": "assets/events/animal-feeding-16-aug-2026/animal-feeding-01.webp",
+        "filename": "animal-feeding-01.webp",
+        "title": "Drive Moment",
+        "desc": "On-ground drive photo capture"
+      },
+      "media": [
+        {
+          "id": "media-animal-feeding-16-aug-2026-animal-feeding-01-webp",
+          "type": "image",
+          "src": "assets/events/animal-feeding-16-aug-2026/animal-feeding-01.webp",
+          "filename": "animal-feeding-01.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-animal-feeding-16-aug-2026-animal-feeding-02-webp",
+          "type": "image",
+          "src": "assets/events/animal-feeding-16-aug-2026/animal-feeding-02.webp",
+          "filename": "animal-feeding-02.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-animal-feeding-16-aug-2026-animal-feeding-03-webp",
+          "type": "image",
+          "src": "assets/events/animal-feeding-16-aug-2026/animal-feeding-03.webp",
+          "filename": "animal-feeding-03.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-animal-feeding-16-aug-2026-animal-feeding-04-webp",
+          "type": "image",
+          "src": "assets/events/animal-feeding-16-aug-2026/animal-feeding-04.webp",
+          "filename": "animal-feeding-04.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-animal-feeding-16-aug-2026-animal-feeding-05-webp",
+          "type": "image",
+          "src": "assets/events/animal-feeding-16-aug-2026/animal-feeding-05.webp",
+          "filename": "animal-feeding-05.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-animal-feeding-16-aug-2026-animal-feeding-06-webp",
+          "type": "image",
+          "src": "assets/events/animal-feeding-16-aug-2026/animal-feeding-06.webp",
+          "filename": "animal-feeding-06.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-animal-feeding-16-aug-2026-animal-feeding-07-webp",
+          "type": "image",
+          "src": "assets/events/animal-feeding-16-aug-2026/animal-feeding-07.webp",
+          "filename": "animal-feeding-07.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-animal-feeding-16-aug-2026-animal-feeding-08-webp",
+          "type": "image",
+          "src": "assets/events/animal-feeding-16-aug-2026/animal-feeding-08.webp",
+          "filename": "animal-feeding-08.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-animal-feeding-16-aug-2026-animal-feeding-09-webp",
+          "type": "image",
+          "src": "assets/events/animal-feeding-16-aug-2026/animal-feeding-09.webp",
+          "filename": "animal-feeding-09.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-animal-feeding-16-aug-2026-animal-feeding-10-webp",
+          "type": "image",
+          "src": "assets/events/animal-feeding-16-aug-2026/animal-feeding-10.webp",
+          "filename": "animal-feeding-10.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-animal-feeding-16-aug-2026-animal-feeding-11-webp",
+          "type": "image",
+          "src": "assets/events/animal-feeding-16-aug-2026/animal-feeding-11.webp",
+          "filename": "animal-feeding-11.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-animal-feeding-16-aug-2026-animal-feeding-12-webp",
+          "type": "image",
+          "src": "assets/events/animal-feeding-16-aug-2026/animal-feeding-12.webp",
+          "filename": "animal-feeding-12.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-animal-feeding-16-aug-2026-animal-feeding-13-webp",
+          "type": "image",
+          "src": "assets/events/animal-feeding-16-aug-2026/animal-feeding-13.webp",
+          "filename": "animal-feeding-13.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-animal-feeding-16-aug-2026-animal-feeding-14-webp",
+          "type": "image",
+          "src": "assets/events/animal-feeding-16-aug-2026/animal-feeding-14.webp",
+          "filename": "animal-feeding-14.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-animal-feeding-16-aug-2026-animal-feeding-15-webp",
+          "type": "image",
+          "src": "assets/events/animal-feeding-16-aug-2026/animal-feeding-15.webp",
+          "filename": "animal-feeding-15.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-animal-feeding-16-aug-2026-animal-feeding-16-webp",
+          "type": "image",
+          "src": "assets/events/animal-feeding-16-aug-2026/animal-feeding-16.webp",
+          "filename": "animal-feeding-16.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        }
+      ]
+    },
+    {
+      "id": "study-kits",
+      "folderName": "study-kits",
+      "title": "Study Kits Distribution for 22 Children",
+      "subtitle": "Empowering children with school bags, notebooks, geometry boxes, and stationery",
+      "date": "02 Aug 2026",
+      "dateFull": "Sunday, 02 August 2026",
+      "day": "02",
+      "month": "AUG",
+      "year": "2026",
+      "sortDate": "2026-08-02",
+      "category": "study-kits",
+      "categoryName": "Sarva Shiksha (Education)",
+      "categoryIcon": "fa-graduation-cap",
+      "badgeColor": "linear-gradient(135deg, #0284C7, #0E7490)",
+      "tagBg": "rgba(2, 132, 199, 0.12)",
+      "tagColor": "#0284C7",
+      "location": "Maranatha Orphanage, Chembur West, Mumbai",
+      "desc": "Our team successfully distributed free study kits, school bags, notebooks, geometry boxes, and stationery to 22 children at Maranatha Orphanage Society.",
+      "beneficiaries": "22 Children",
+      "blogUrl": "blog-study-kits-maranatha.html",
+      "imageCount": 11,
+      "videoCount": 0,
+      "totalCount": 11,
+      "coverMedia": {
+        "id": "media-study-kits-study-kit-01-webp",
+        "type": "image",
+        "src": "assets/events/study-kits/study-kit-01.webp",
+        "filename": "study-kit-01.webp",
+        "title": "Drive Moment",
+        "desc": "On-ground drive photo capture"
+      },
+      "media": [
+        {
+          "id": "media-study-kits-study-kit-01-webp",
+          "type": "image",
+          "src": "assets/events/study-kits/study-kit-01.webp",
+          "filename": "study-kit-01.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-study-kits-study-kit-02-webp",
+          "type": "image",
+          "src": "assets/events/study-kits/study-kit-02.webp",
+          "filename": "study-kit-02.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-study-kits-study-kit-03-webp",
+          "type": "image",
+          "src": "assets/events/study-kits/study-kit-03.webp",
+          "filename": "study-kit-03.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-study-kits-study-kit-04-webp",
+          "type": "image",
+          "src": "assets/events/study-kits/study-kit-04.webp",
+          "filename": "study-kit-04.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-study-kits-study-kit-05-webp",
+          "type": "image",
+          "src": "assets/events/study-kits/study-kit-05.webp",
+          "filename": "study-kit-05.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-study-kits-study-kit-06-webp",
+          "type": "image",
+          "src": "assets/events/study-kits/study-kit-06.webp",
+          "filename": "study-kit-06.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-study-kits-study-kit-07-webp",
+          "type": "image",
+          "src": "assets/events/study-kits/study-kit-07.webp",
+          "filename": "study-kit-07.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-study-kits-study-kit-08-webp",
+          "type": "image",
+          "src": "assets/events/study-kits/study-kit-08.webp",
+          "filename": "study-kit-08.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-study-kits-study-kit-09-webp",
+          "type": "image",
+          "src": "assets/events/study-kits/study-kit-09.webp",
+          "filename": "study-kit-09.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-study-kits-study-kit-10-webp",
+          "type": "image",
+          "src": "assets/events/study-kits/study-kit-10.webp",
+          "filename": "study-kit-10.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        },
+        {
+          "id": "media-study-kits-study-kit-11-webp",
+          "type": "image",
+          "src": "assets/events/study-kits/study-kit-11.webp",
+          "filename": "study-kit-11.webp",
+          "title": "Drive Moment",
+          "desc": "On-ground drive photo capture"
+        }
+      ]
+    }
+  ]
+}
