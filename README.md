@@ -1,4 +1,4 @@
-<div align="center">
+<div align="center" >
 
 <img src="assets/branding/logo.png" alt="Saving Sarvahita Foundation Logo" width="120" />
 
