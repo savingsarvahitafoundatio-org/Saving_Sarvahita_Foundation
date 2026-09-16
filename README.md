@@ -124,7 +124,8 @@ The website is fully responsive across all screen sizes:
 
 | Channel | Details |
 |---------|---------|
-| 📍 **Address** | Flat No B 609, VK Lal Vishnu Phase 1, SN Dubey Road, Rawalpada, Dahisar East, Mumbai - 400068, Maharashtra |
+| 🏢 **Head Office** | Office No 1, Double Basement, Sai Krupa Mall, LT Road, Opp Railway Station, Tawde Wadi, Next to Deepa Bar, Dahisar West, Mumbai - 400068, Maharashtra |
+| 📍 **Registered Office** | Flat No B 609, VK Lal Vishnu Phase 1, SN Dubey Road, Rawalpada, Dahisar East, Mumbai - 400068, Maharashtra |
 | 📞 **Phone** | +91 8828428845 |
 | 📧 **Email** | info@savingsarvahita.org |
 | 📷 **Instagram** | [@savingsarvahitafoundation](https://www.instagram.com/savingsarvahitafoundation) |
