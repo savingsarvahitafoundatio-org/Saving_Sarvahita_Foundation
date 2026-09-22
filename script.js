@@ -402,7 +402,31 @@ document.addEventListener('DOMContentLoaded', () => {
   // DYNAMIC GALLERY & EVENTS ENGINE (OPTIMIZED & LAG-FREE)
   // ==========================================================================
 
-  const eventsData = window.SAVING_SARVAHITA_EVENTS;
+  // Get effective events data (bridging EventsStore with static fallback)
+  function getEffectiveEventsData() {
+    if (window.EventsStore && typeof window.EventsStore.getEvents === 'function') {
+      const events = window.EventsStore.getEvents();
+      const stats = window.EventsStore.getStats();
+      return { stats, events };
+    }
+    return window.SAVING_SARVAHITA_EVENTS;
+  }
+
+  let eventsData = getEffectiveEventsData();
+
+  // Delegated listeners for dynamically created cards (Volunteer & Donate)
+  document.addEventListener('click', (e) => {
+    const donateBtn = e.target.closest('.trigger-donate');
+    if (donateBtn) {
+      e.preventDefault();
+      if (donateModal) donateModal.classList.add('active');
+    }
+    const volunteerBtn = e.target.closest('.trigger-volunteer');
+    if (volunteerBtn) {
+      e.preventDefault();
+      if (volunteerModal) volunteerModal.classList.add('active');
+    }
+  });
 
   // Universal Lightbox Elements
   const lightboxModal = document.getElementById('lightboxModal');
@@ -521,7 +545,7 @@ document.addEventListener('DOMContentLoaded', () => {
     events.forEach(ev => {
       filtersHtml += `
         <button class="gallery-filter-btn" data-filter="${ev.id}">
-          <i class="fa-solid ${ev.categoryIcon || 'fa-hand-holding-heart'}"></i> ${ev.date} • ${ev.title} (${ev.imageCount})
+          <i class="fa-solid ${ev.categoryIcon || 'fa-hand-holding-heart'}"></i> ${ev.date} • ${ev.title} (${ev.imageCount || (ev.media ? ev.media.length : 0)})
         </button>
       `;
     });
@@ -532,6 +556,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let groupsHtml = '';
 
     events.forEach(ev => {
+      const mediaList = ev.media || [];
       groupsHtml += `
         <div class="gallery-date-group" id="group-${ev.id}" data-event-id="${ev.id}" data-category="${ev.category}">
           <!-- Phone / Timeline Style Date Header -->
@@ -560,7 +585,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="gallery-grid">
       `;
 
-      ev.media.forEach((item, idx) => {
+      mediaList.forEach((item, idx) => {
         const itemNumber = idx + 1;
         const itemTitle = `${ev.title} #${itemNumber}`;
 
@@ -581,7 +606,7 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
     });
 
-    // Seamlessly swap loader with rendered content
+    // Swap loader with rendered content
     dynamicGalleryContainer.innerHTML = filtersHtml + groupsHtml;
 
     // Hook up dynamic filters
@@ -614,7 +639,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Check URL Hash to auto-filter on load (e.g. gallery.html#05-09-26-dog-feeding)
+    // Check URL Hash to auto-filter on load
     const hash = window.location.hash ? window.location.hash.substring(1) : null;
     if (hash) {
       const targetBtn = Array.from(filterButtons).find(b => b.getAttribute('data-filter') === hash || b.getAttribute('data-filter') === hash.replace('group-', ''));
@@ -630,78 +655,189 @@ document.addEventListener('DOMContentLoaded', () => {
     setupLightboxHandlers();
   }
 
-  // 2. RENDER DYNAMIC EVENTS SECTION ON INDEX.HTML IF CONTAINER EXISTS
-  const dynamicEventsContainer = document.querySelector('.events-premium-grid');
-  if (dynamicEventsContainer && eventsData && eventsData.events) {
+  // 2. RENDER DYNAMIC EVENTS (BOTH UPCOMING AND COMPLETED) ON INDEX.HTML
+  function renderAllDynamicEvents() {
+    const dynamicEventsContainer = document.querySelector('.events-premium-grid');
+    if (!dynamicEventsContainer) return;
+
+    const data = getEffectiveEventsData();
+    const upcomingEvents = (window.EventsStore && typeof window.EventsStore.getUpcomingEvents === 'function') 
+      ? window.EventsStore.getUpcomingEvents() 
+      : [];
+
     let eventsHtml = '';
 
-    eventsData.events.forEach((ev) => {
-      const coverSrc = ev.coverMedia ? ev.coverMedia.src : (ev.media[0] ? ev.media[0].src : '');
-      const statusBadge = `<div class="ep-card-status ep-status--completed"><i class="fa-solid fa-circle-check"></i> ${ev.date} Drive</div>`;
-      
-      let blogBtn = '';
-      if (ev.blogUrl) {
-        blogBtn = `
-          <a href="${ev.blogUrl}" class="btn btn-teal">
-            <i class="fa-solid fa-newspaper"></i> Read Blog Story
-          </a>
+    // A. Render Upcoming Events first
+    if (upcomingEvents && upcomingEvents.length > 0) {
+      upcomingEvents.forEach(item => {
+        const bannerSrc = item.image || 'assets/events/animal-feeding-16-aug-2026/animal-feeding-01.webp';
+        eventsHtml += `
+          <article class="ep-card" data-event-status="upcoming" style="border: 2px solid rgba(14, 116, 144, 0.35); box-shadow: 0 8px 30px rgba(14, 116, 144, 0.12);">
+            <div class="ep-card-banner">
+              <img src="${bannerSrc}" alt="${item.title}" loading="lazy" onerror="this.src='assets/events/animal-feeding-16-aug-2026/animal-feeding-01.webp'">
+              <div class="ep-card-banner-overlay"></div>
+              <div class="ep-card-status ep-status--upcoming" style="background: #0E7490; color: white;">
+                <i class="fa-solid fa-bullhorn"></i> ${item.badge || 'Upcoming This Week'}
+              </div>
+              <div class="ep-card-category-pill" style="background: rgba(14, 116, 144, 0.9);">
+                <i class="fa-solid ${item.categoryIcon || 'fa-paw'}"></i> ${item.categoryName || 'Sarva Jeev Raksha'}
+              </div>
+            </div>
+
+            <div class="ep-card-body">
+              <div class="ep-card-meta-row">
+                <span class="ep-meta-item">
+                  <i class="fa-solid fa-calendar-day" style="color: #0E7490;"></i>
+                  ${item.dateText || 'This Week'}
+                </span>
+                <span class="ep-meta-divider">•</span>
+                <span class="ep-meta-item">
+                  <i class="fa-solid fa-location-dot" style="color: #F97316;"></i>
+                  ${item.location || 'Mumbai Suburbs'}
+                </span>
+              </div>
+
+              <h3 class="ep-card-title">${item.title}</h3>
+              <p class="ep-card-desc">${item.desc}</p>
+
+              <div class="ep-impact-row">
+                <div class="ep-impact-chip">
+                  <span class="ep-impact-num" style="color: #0E7490;">${item.targetMetric1 || 'Planned'}</span>
+                  <span class="ep-impact-lbl">Target Goal</span>
+                </div>
+                <div class="ep-impact-chip">
+                  <span class="ep-impact-num" style="color: #10B981;">${item.targetMetric2 || 'Open'}</span>
+                  <span class="ep-impact-lbl">Volunteer Slots</span>
+                </div>
+              </div>
+
+              <div class="ep-card-actions">
+                <button class="btn btn-orange trigger-volunteer" style="flex: 1; justify-content: center;">
+                  <i class="fa-solid fa-hand-holding-heart"></i> Join as Volunteer
+                </button>
+                <button class="btn btn-teal trigger-donate" style="flex: 1; justify-content: center;">
+                  <i class="fa-solid fa-heart"></i> Sponsor Next
+                </button>
+              </div>
+            </div>
+          </article>
         `;
-      }
+      });
+    }
 
-      eventsHtml += `
-        <article class="ep-card ep-card--completed" id="event-${ev.id}">
-          <div class="ep-card-banner">
-            <img src="${coverSrc}" alt="${ev.title}" loading="lazy" decoding="async" onerror="this.src='assets/events/study-kits/study-kit-01.webp'">
-            <div class="ep-card-banner-overlay"></div>
-            ${statusBadge}
-            <div class="ep-card-category-pill" style="background: rgba(14, 116, 144, 0.9);">
-              <i class="fa-solid ${ev.categoryIcon || 'fa-paw'}"></i> ${ev.categoryName}
-            </div>
-          </div>
+    // B. Render Completed Drives
+    if (data && data.events) {
+      data.events.forEach(ev => {
+        const coverSrc = ev.coverMedia ? ev.coverMedia.src : (ev.media && ev.media[0] ? ev.media[0].src : 'assets/events/study-kits/study-kit-01.webp');
+        const statusBadge = `<div class="ep-card-status ep-status--completed"><i class="fa-solid fa-circle-check"></i> ${ev.date} Drive</div>`;
+        const photoCount = ev.media ? ev.media.length : (ev.imageCount || 0);
 
-          <div class="ep-card-body">
-            <div class="ep-card-meta-row">
-              <span class="ep-meta-item">
-                <i class="fa-solid fa-calendar-check" style="color: #10B981;"></i>
-                ${ev.date}
-              </span>
-              <span class="ep-meta-divider">•</span>
-              <span class="ep-meta-item">
-                <i class="fa-solid fa-location-dot" style="color: #F97316;"></i>
-                ${ev.location}
-              </span>
-            </div>
+        let blogBtn = '';
+        if (ev.blogUrl) {
+          blogBtn = `
+            <a href="${ev.blogUrl}" class="btn btn-teal">
+              <i class="fa-solid fa-newspaper"></i> Read Blog Story
+            </a>
+          `;
+        }
 
-            <h3 class="ep-card-title">${ev.title}</h3>
-            <p class="ep-card-desc">${ev.desc}</p>
-
-            <div class="ep-impact-row">
-              <div class="ep-impact-chip">
-                <span class="ep-impact-num">${ev.imageCount}+</span>
-                <span class="ep-impact-lbl">Photos</span>
-              </div>
-              <div class="ep-impact-chip">
-                <span class="ep-impact-num">${ev.beneficiaries || '100%'}</span>
-                <span class="ep-impact-lbl">Impact Reach</span>
+        eventsHtml += `
+          <article class="ep-card ep-card--completed" data-event-status="completed" id="event-${ev.id}">
+            <div class="ep-card-banner">
+              <img src="${coverSrc}" alt="${ev.title}" loading="lazy" decoding="async" onerror="this.src='assets/events/study-kits/study-kit-01.webp'">
+              <div class="ep-card-banner-overlay"></div>
+              ${statusBadge}
+              <div class="ep-card-category-pill" style="background: rgba(14, 116, 144, 0.9);">
+                <i class="fa-solid ${ev.categoryIcon || 'fa-paw'}"></i> ${ev.categoryName}
               </div>
             </div>
 
-            <div class="ep-card-actions">
-              ${blogBtn}
-              <a href="gallery.html#${ev.id}" class="btn btn-teal">
-                <i class="fa-solid fa-images"></i> View Event Gallery
-              </a>
-              <button class="btn btn-orange trigger-donate">
-                <i class="fa-solid fa-heart"></i> Sponsor Next
-              </button>
+            <div class="ep-card-body">
+              <div class="ep-card-meta-row">
+                <span class="ep-meta-item">
+                  <i class="fa-solid fa-calendar-check" style="color: #10B981;"></i>
+                  ${ev.date}
+                </span>
+                <span class="ep-meta-divider">•</span>
+                <span class="ep-meta-item">
+                  <i class="fa-solid fa-location-dot" style="color: #F97316;"></i>
+                  ${ev.location}
+                </span>
+              </div>
+
+              <h3 class="ep-card-title">${ev.title}</h3>
+              <p class="ep-card-desc">${ev.desc}</p>
+
+              <div class="ep-impact-row">
+                <div class="ep-impact-chip">
+                  <span class="ep-impact-num">${photoCount}+</span>
+                  <span class="ep-impact-lbl">Photos</span>
+                </div>
+                <div class="ep-impact-chip">
+                  <span class="ep-impact-num">${ev.beneficiaries || '100%'}</span>
+                  <span class="ep-impact-lbl">Impact Reach</span>
+                </div>
+              </div>
+
+              <div class="ep-card-actions">
+                ${blogBtn}
+                <a href="gallery.html#${ev.id}" class="btn btn-teal">
+                  <i class="fa-solid fa-images"></i> View Event Gallery
+                </a>
+                <button class="btn btn-orange trigger-donate">
+                  <i class="fa-solid fa-heart"></i> Sponsor Next
+                </button>
+              </div>
             </div>
-          </div>
-        </article>
-      `;
-    });
+          </article>
+        `;
+      });
+    }
 
     dynamicEventsContainer.innerHTML = eventsHtml;
+
+    // Update Filter Tab counters
+    const countAllEl = document.getElementById('countAllEvents');
+    const countUpcomingEl = document.getElementById('countUpcomingEvents');
+    const countCompletedEl = document.getElementById('countCompletedEvents');
+    const upcomingCount = upcomingEvents.length;
+    const completedCount = (data && data.events) ? data.events.length : 0;
+    
+    if (countAllEl) countAllEl.textContent = upcomingCount + completedCount;
+    if (countUpcomingEl) countUpcomingEl.textContent = upcomingCount;
+    if (countCompletedEl) countCompletedEl.textContent = completedCount;
+
+    // Attach click listeners to homepage events tabs (Upcoming vs Completed)
+    const filterPills = document.querySelectorAll('.events-tab-pill');
+    filterPills.forEach(pill => {
+      pill.onclick = () => {
+        filterPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        const filterVal = pill.getAttribute('data-filter');
+        const cards = dynamicEventsContainer.querySelectorAll('.ep-card');
+        cards.forEach(card => {
+          const cardStatus = card.getAttribute('data-event-status');
+          if (filterVal === 'all' || cardStatus === filterVal) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      };
+    });
   }
+
+  // Execute initial events rendering
+  renderAllDynamicEvents();
+
+  // Listen for live data updates from admin
+  window.addEventListener('sarvahita-data-updated', () => {
+    eventsData = getEffectiveEventsData();
+    renderAllDynamicEvents();
+    if (dynamicGalleryContainer) {
+      renderDynamicGalleryPage(eventsData);
+    }
+  });
 
   // 3. HOMEPAGE GALLERY PREVIEW SETUP & FILTERS (BALANCED 6 HIGHLIGHTS)
   const homeGallerySection = document.getElementById('gallery');

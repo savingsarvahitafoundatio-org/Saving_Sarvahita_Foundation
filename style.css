@@ -2401,6 +2401,57 @@ img {
   line-height: 1.7;
 }
 
+/* Two distinct tabs for Upcoming vs Completed Initiatives */
+.events-nav-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: -10px auto 44px;
+  flex-wrap: wrap;
+}
+
+.events-tab-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: 1.5px solid #CBD5E1;
+  background: white;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.events-tab-pill:hover {
+  border-color: var(--primary-teal);
+  color: var(--primary-teal);
+  transform: translateY(-2px);
+}
+
+.events-tab-pill.active {
+  background: linear-gradient(135deg, #0E7490, #0369A1);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 16px rgba(14, 116, 144, 0.28);
+}
+
+.events-tab-pill .pill-count {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+.events-tab-pill:not(.active) .pill-count {
+  background: #F1F5F9;
+  color: #64748B;
+}
+
 .events-premium-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));

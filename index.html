@@ -336,6 +336,19 @@
         <p class="events-header-sub">Real impact, real stories — every drive we complete changes lives across Mumbai.</p>
       </div>
 
+      <!-- Two Distinct Tabs: Upcoming vs Completed Drives -->
+      <div class="events-nav-tabs" id="eventsFilterTabs">
+        <button type="button" class="events-tab-pill active" data-filter="all">
+          <i class="fa-solid fa-layer-group"></i> All Initiatives <span class="pill-count" id="countAllEvents">5</span>
+        </button>
+        <button type="button" class="events-tab-pill" data-filter="upcoming">
+          <i class="fa-solid fa-bullhorn" style="color: #0E7490;"></i> Upcoming Events <span class="pill-count" id="countUpcomingEvents">1</span>
+        </button>
+        <button type="button" class="events-tab-pill" data-filter="completed">
+          <i class="fa-solid fa-circle-check" style="color: #10B981;"></i> Completed Drives <span class="pill-count" id="countCompletedEvents">4</span>
+        </button>
+      </div>
+
       <!-- Event Cards Grid -->
       <div class="events-premium-grid">
 
@@ -842,6 +855,7 @@
           <a href="#causes">Our Causes</a>
           <a href="#campaigns">Upcoming Event</a>
           <a href="#credentials">Registration Details</a>
+          <a href="admin.html" style="color: #94A3B8;"><i class="fa-solid fa-lock"></i> Admin Portal</a>
         </div>
       </div>
 
@@ -1038,6 +1052,7 @@
 
   <!-- JavaScript -->
   <script src="assets/events/events-data.js"></script>
+  <script src="assets/events/events-store.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
